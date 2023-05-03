@@ -28,9 +28,9 @@ export default function Home() {
   ];
 
   return (
-    <main className="scroll-hidden">
-      <MainMenu></MainMenu>
-      <section className="flex h-[100vh] ">
+    <main className="scroller">
+      {/* <MainMenu></MainMenu> */}
+      <section className="flex h-[100vh] scroll-child">
         <div className="w-1/2 h-full flex items-center justify-end fixed">
           <h1
             className={`${poppins.className} 	 text-7xl w-[40vw] text-right absolute text-zinc-700 mb-[10rem] mr-8`}
@@ -44,8 +44,8 @@ export default function Home() {
           </h1>
         </div>
         <div className="w-1/2 h-full  justify-start flex items-center">
-          <div className="p-8">
-            <div className="flex z-10 flex-col mt-[40rem] text-left fixed bottom-0 left-[50%] mb-[5rem] ml-8">
+          <div className="p-8 relative z-10 ">
+            <div className="flex flex-col mt-[40rem] text-left fixed bottom-0 left-[50%] mb-[5rem] ml-8">
               {/* <h3 className="text-sm font-thin">principais projetos</h3> */}
               <div className="flex gap-3">
                 {projects.map((el, i) => (
@@ -68,9 +68,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-end">
-        <div className=" w-1/2   scroller ">
-          {projectsBanner.map((el, i) => (
+      {projectsBanner.map((el, i) => (
+        <section className="scroll-child flex justify-between" key={i}>
+          <div className="w-1/2" />
+          <div className=" w-1/2    ">
             <div className="w-full scroll-child ">
               <BannerAside
                 title={el.title}
@@ -78,7 +79,13 @@ export default function Home() {
                 imagePath={el.imagePath}
               ></BannerAside>
             </div>
-          ))}
+          </div>
+        </section>
+      ))}
+
+      <section className="scroll-child relative">
+        <div className=" z-40 h-[100vh] w-full p-20 bg-zinc-900">
+        <h1 className={`${subtitle.className} text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600`}>Fale comigo</h1>
         </div>
       </section>
     </main>
