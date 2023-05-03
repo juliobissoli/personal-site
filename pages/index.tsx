@@ -1,48 +1,84 @@
 import Image from "next/image";
 import { Manrope } from "next/font/google";
 import MainMenu from "@/components/mainMenu";
+import BannerAside from "@/components/home/bannerAside";
 
 const poppins = Manrope({ weight: "800", subsets: ["latin"] });
+const subtitle = Manrope({ weight: "400", subsets: ["latin"] });
 
 export default function Home() {
-
   const projects = [
-    {name: 'CodeTime', icon: 'icon-cod-time', bgColor: '#333333'},
-    {name: 'Linhagua', icon: 'icon-linhagua ', bgColor: '#333DCA'},
-    {name: 'StoneBox', icon: 'icon-stone-box', bgColor: '#160C01'},
-    {name: 'Amais', icon: 'icon-amais', bgColor: '#8257E5'},
-  ]
+    { name: "CodeTime", icon: "icon-cod-time", bgColor: "#333333" },
+    { name: "Linhagua", icon: "icon-linhagua ", bgColor: "#333333" },
+    { name: "StoneBox", icon: "icon-stone-box", bgColor: "#333333" },
+    { name: "Amais", icon: "icon-amais", bgColor: "#333333" },
+  ];
+
+  const projectsBanner = [
+    {
+      title: "CodTime",
+      year: "2021 - 2022",
+      imagePath: "codtime-splash-img.png",
+    },
+    {
+      title: "ERP-Linhagua",
+      year: "2021 - 2022",
+      imagePath: "linhagua-splash-img.png",
+    },
+  ];
 
   return (
-    <main className="">
+    <main className="scroll-hidden">
       <MainMenu></MainMenu>
-      <section className="flex h-[100vh]">
-        <div className="w-1/2 h-full flex items-center justify-end">
+      <section className="flex h-[100vh] ">
+        <div className="w-1/2 h-full flex items-center justify-end fixed">
           <h1
-            className={`${poppins.className} 	 text-7xl w-[40vw] text-right absolute text-zinc-700 mb-[20rem]`}
+            className={`${poppins.className} 	 text-7xl w-[40vw] text-right absolute text-zinc-700 mb-[10rem] mr-8`}
           >
-            Desenvolvedor e <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"> UI/UX </span> design
+            Desenvolvedor e{" "}
+            <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              {" "}
+              UI/UX{" "}
+            </span>{" "}
+            design
           </h1>
         </div>
         <div className="w-1/2 h-full  justify-start flex items-center">
-          <div className="flex flex-col mt-[10rem]">
-
-          <h3 className="teste">
-             principais projetos
-            </h3>
-          <div className="flex gap-3">
-            {
-              projects.map((el, i) => (
-                <div key={i}
-                style={{backgroundColor: el.bgColor}}
-                className="h-[80px] w-[80px] flex justify-center items-center rounded">
-                <i className={`icon ${el.icon} bg-white h-[50px] w-[50px]`}></i>
+          <div className="p-8">
+            <div className="flex z-10 flex-col mt-[40rem] text-left fixed bottom-0 left-[50%] mb-[5rem] ml-8">
+              {/* <h3 className="text-sm font-thin">principais projetos</h3> */}
+              <div className="flex gap-3">
+                {projects.map((el, i) => (
+                  <div
+                    key={i}
+                    // style={{ backgroundColor: el.bgColor }}
+                    className={`${
+                      i !== 0 ? "border border-zinc-400" : "bg-zinc-800"
+                    } h-[60px] w-[60px] flex justify-center items-center rounded-xl`}
+                  >
+                    <i
+                      className={`icon ${el.icon} ${
+                        i == 0 ? "bg-white" : "bg-zinc-900"
+                      } h-[30px] w-[30px]`}
+                    ></i>
+                  </div>
+                ))}
               </div>
-              ))
-            }
-           
+            </div>
           </div>
-          </div>
+        </div>
+      </section>
+      <section className="flex justify-end">
+        <div className=" w-1/2   scroller ">
+          {projectsBanner.map((el, i) => (
+            <div className="w-full scroll-child ">
+              <BannerAside
+                title={el.title}
+                year={el.year}
+                imagePath={el.imagePath}
+              ></BannerAside>
+            </div>
+          ))}
         </div>
       </section>
     </main>
