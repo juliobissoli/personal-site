@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Manrope } from "next/font/google";
 import MainMenu from "@/components/mainMenu";
 import BannerAside from "@/components/home/bannerAside";
+import { useRef } from "react";
+import useOnScreen from "@/utils/isVisible";
 
 const poppins = Manrope({ weight: "800", subsets: ["latin"] });
 const subtitle = Manrope({ weight: "400", subsets: ["latin"] });
@@ -27,31 +29,36 @@ export default function Home() {
     },
   ];
 
+
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  // const isVisible = useOnScreen(ref);
+
+
   return (
-    <main className="scroller">
+    <main className="scroller overflow-y-hidden	">
       {/* <MainMenu></MainMenu> */}
-      <section className="flex h-[100vh] scroll-child">
-        <div className="w-1/2 h-full flex items-center justify-end fixed">
+      <section className="flex  h-[100vh] scroll-child">
+        <div className="w-1/2 h-full  relative flex items-center justify-end fixed">
           <h1
-            className={`${poppins.className} 	 text-7xl w-[40vw] text-right absolute text-zinc-700 mb-[10rem] mr-8`}
+            className={`${poppins.className} 	 text-7xl w-[40vw] text-right fixed text-zinc-700 mb-[10rem] mr-8`}
           >
             Desenvolvedor e{" "}
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               {" "}
               UI/UX{" "}
             </span>{" "}
-            design
+            design 
           </h1>
         </div>
         <div className="w-1/2 h-full  justify-start flex items-center">
-          <div className="p-8 relative z-10 ">
-            <div className="flex flex-col mt-[40rem] text-left fixed bottom-0 left-[50%] mb-[5rem] ml-8">
-              {/* <h3 className="text-sm font-thin">principais projetos</h3> */}
+          <div className="p-8  z-10 sticky">
+            <div className="flex flex-col mt-[40rem] text-left  fixed bottom-0 left-[50%] mb-[5rem] ml-8">
               <div className="flex gap-3">
                 {projects.map((el, i) => (
                   <div
                     key={i}
-                    // style={{ backgroundColor: el.bgColor }}
                     className={`${
                       i !== 0 ? "border border-zinc-400" : "bg-zinc-800"
                     } h-[60px] w-[60px] flex justify-center items-center rounded-xl`}
@@ -72,7 +79,7 @@ export default function Home() {
         <section className="scroll-child flex justify-between" key={i}>
           <div className="w-1/2" />
           <div className=" w-1/2    ">
-            <div className="w-full scroll-child ">
+            <div className="w-full scroll-child " ref={ref}>
               <BannerAside
                 title={el.title}
                 year={el.year}
@@ -83,8 +90,8 @@ export default function Home() {
         </section>
       ))}
 
-      <section className="scroll-child relative">
-        <div className=" z-40 h-[100vh] w-full p-20 bg-zinc-900">
+      <section className="scroll-child sticky">
+        <div className=" h-[100vh] w-full p-20 bg-zinc-900">
         <h1 className={`${subtitle.className} text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600`}>Fale comigo</h1>
         </div>
       </section>
