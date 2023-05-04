@@ -19,7 +19,7 @@ const ProjectDetail: NextPage = (props) => {
   return (
     <section>
       <div className="relative h-[50vh] w-full ">
-        <img src={`/${imgUrl}`} className="h-full w-full" />
+        <img src={`/${imgUrl}`} className="h-full w-full object-cover" />
         <div className="absolute text-white top-0  w-full h-full opacity-70 bg-gradient-to-t from-transparent to-zinc-900 from-60%">
           <div className={`w-ful flex justify-start flex-col p-8`}>
             <header className="w-full ">

@@ -73,7 +73,7 @@ const BannerAside: React.FC<Props> = ({ title, year, imagePath }) => {
         </span>
       </button>
       <div className="relative h-[100vh] w-full " ref={ref}>
-        <img src={imagePath} className="h-full w-full" />
+        <img src={imagePath} className="h-full w-full  object-cover" />
         <div className="absolute text-white top-0  w-full h-full opacity-70 bg-gradient-to-t from-transparent to-zinc-900 from-60%">
           <div
             className={`${subtitle.className} w-ful flex justify-start flex-col p-8`}
