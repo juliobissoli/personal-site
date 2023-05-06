@@ -1,3 +1,5 @@
+import FooterScream from "@/components/footerScream";
+import MainMenu from "@/components/mainMenu";
 import { ArrowLeft, Timer } from "@phosphor-icons/react";
 import { NextPage } from "next";
 import { Manrope } from "next/font/google";
@@ -13,6 +15,18 @@ const ProjectDetail: NextPage = (props) => {
 
   const [imgUrl, setImg] = useState("");
 
+  const projectDetail = {
+    year: ["2021 - 2022"],
+    tasks: ["UI/UX", "Desenvolvimento do sistema web", "Integração com GitLab"],
+    tools: ["Figma", "VueJs", "Insomnia"],
+  };
+
+  const entities = [
+    { value: "year", label: "Ano" },
+    { value: "tasks", label: "Atividades" },
+    { value: "tools", label: "Ferramentas" },
+  ];
+
   useEffect(() => {
     const url = router?.query?.id?.toString() || "";
     setImg(url);
@@ -21,29 +35,26 @@ const ProjectDetail: NextPage = (props) => {
 
   return (
     <main className="scroller overflow-y-hidden	">
-      {/* <MainMenu></MainMenu> */}
       <section className="flex  h-[100vh] scroll-child">
         <aside className="relative h-[100vh] w-1/2 ">
+          <button className="w-12 h-12 rounded-full absolute top-16 left-16 z-10 bg-white flex items-center justify-center border">
+            <Link href={`/`} className="flex gap-2">
+              <ArrowLeft size={22} />
+            </Link>
+          </button>
           <img
             src={`/${imgUrl}`}
             className="h-full w-full object-cover border-0"
           />
-          <div className="absolute text-white top-0  w-full h-full opacity-70 bg-gradient-to-t from-transparent to-zinc-900 from-60%">
-            <div className={`w-ful flex justify-start flex-col p-8`}>
-              <header className="w-full ">
-                <Link href={`/`} className="flex gap-2">
-                  <ArrowLeft size={22} />
-                  Voltar
-                </Link>
-              </header>
-            </div>
+          <div className="absolute  top-0">
+            <div className={`w-ful flex justify-start flex-col p-8`}></div>
           </div>
         </aside>
-        <aside className="w-1/2 h-full relative justify-start flex ">
-          <div className="fixed p-8 top-[30%]">
+        <aside className="w-1/2 h-full relative justify-start flex items-center">
+          <div className="fixed px-8 mt-[-62px]">
             <Timer size={48} weight="light" />{" "}
-            <h1 className={`text-4xl text-zinc-900 ${subtitle.className}`}>
-              {imgUrl}
+            <h1 className={`text-8xl  text-zinc-900 ${subtitle.className}`}>
+              ERP-Linhagua
             </h1>
           </div>
         </aside>
@@ -52,8 +63,11 @@ const ProjectDetail: NextPage = (props) => {
         <div className=" w-1/2    ">
           <div className="w-full scroll-child ">
             <aside className="h-[100vh] w-full p-8 flex justify-center items-center">
-              <span className="text-2xl text-center">
-                descrição do projeto, descrição do projeto, descrição do projeto...
+              <span
+                className={`text-4xl text-center w-4/6 text-zinc-700 font-thin ${subtitle.className}`}
+              >
+                “O primeiro!! Esse sistema aulixia na gerencia de toda produção
+                de uma emporesa envasodoa de água mineral”
               </span>
             </aside>
           </div>
@@ -61,48 +75,45 @@ const ProjectDetail: NextPage = (props) => {
         <div className="w-1/2" />
       </section>
 
-      <section className="scroll-child sticky">
-        <div className=" h-[100vh] w-[100wv] bg-red-200 p-20">
-          <h1 className={`${subtitle.className} text-4xl `}>Sobre o projeto</h1>
+      <section className="scroll-child sticky ">
+        <div className=" w-[100wv] bg-zinc-50 p-20 ">
+          <div className="page-wrapper p-16">
+            <div className={`${subtitle.className} flex relative`}>
+              <aside className="w-3/5">
+                <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12 "></div>
+                <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12  "></div>
+                <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12 "></div>
+              </aside>
+
+              <aside className="w-2/5 pl-16 sticky bottom-0">
+
+                {entities.map((entity, i) => (
+                  <div className={`mb-8 ${subtitle.className}`} key={i}>
+                    <h3
+                      className={`${subtitle.className} text-2xl py-1 text-sm text-zinc-500 w-full border-b border-zinc-900`}
+                    >
+                      {entity.label}
+                    </h3>
+                    <ul>
+                      {(projectDetail as any)[entity.value].map((el: any, j: number) => (
+                        <li className={`${subtitle.className} text-2xl py-1`} key={j}>
+                          {el}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </aside>
+            </div>
+          </div>
         </div>
       </section>
+
+      <section className="scroll-child sticky">
+        <FooterScream />
+      </section>
     </main>
-    // <main>
-    //   <section className="w-full flex">
-    // <aside className="relative h-[100vh] w-1/2 ">
-    //   <img
-    //     src={`/${imgUrl}`}
-    //     className="h-full w-full object-cover border-0"
-    //   />
-    //   <div className="absolute text-white top-0  w-full h-full opacity-70 bg-gradient-to-t from-transparent to-zinc-900 from-60%">
-    //     <div className={`w-ful flex justify-start flex-col p-8`}>
-    //       <header className="w-full ">
-    //         <Link href={`/`} className="flex gap-2">
-    //           <ArrowLeft size={22} />
-    //           Voltar
-    //         </Link>
-    //       </header>
-    //     </div>
-    //   </div>
-    // </aside>
-    //     <aside className="p-20 w-1/2 h-[100vh] flex items-center">
-    // <div>
-    //   <Timer size={48} weight="light" />{" "}
-    //   <h1 className={`text-4xl text-zinc-900 ${subtitle.className}`}>
-    //     {imgUrl}
-    //   </h1>
-    // </div>
-    //     </aside>
-    //   </section>
-    //   <section className="h-[100vh] bg-zinc-900">
-    //     <div className="w-full flex justify-center ">
-    //       <span className="text-2xl  text-center text-white w-3/5 font-thin p-8">
-    //         O que é o projeto, tipo um pequeno slogam, porque ele foi
-    //         desenvolvido, qual era o intuído, projeto pessoal, freelancer
-    //       </span>
-    //     </div>
-    //   </section>
-    // </main>
+ 
   );
 };
 

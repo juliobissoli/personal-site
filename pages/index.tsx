@@ -91,7 +91,7 @@ export default function Home() {
       ))}
 
       <section className="scroll-child sticky">
-        <div className=" h-[100vh] w-full p-20 bg-zinc-900">
+        <div className=" h-[100vh] w-full p-20 bg-zinc-900 z-20">
         <h1 className={`${subtitle.className} text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600`}>Fale comigo</h1>
         </div>
       </section>
