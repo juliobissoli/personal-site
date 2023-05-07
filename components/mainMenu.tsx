@@ -16,7 +16,6 @@ export default function MainMenu() {
         <span className={textThin.className}> Bissoli</span>
       </Link>
       <button 
-        style={{font: '900 35vmin/35vh cookie, cursive;', mixBlendMode: 'difference'}}
       
       className={`${extraBold.className} hover:gap-1 flex py-2`}>
         <span>{"{"}</span>

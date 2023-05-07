@@ -40,7 +40,7 @@ export default function Home() {
     <main className="scroller overflow-y-hidden	">
       {/* <MainMenu></MainMenu> */}
       <section className="flex  h-[100vh] scroll-child">
-        <div className="w-1/2 h-full  relative flex items-center justify-end">
+        <div className="w-full h-full  relative flex items-center justify-end">
           <h1
             className={`${poppins.className} 	 text-7xl w-[40vw] text-right fixed text-zinc-700 mb-[10rem] mr-8`}
           >

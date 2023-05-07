@@ -11,28 +11,62 @@
 }
 
 
-.scroll-hidden {
-  overflow: hidden
-} 
+.scroll-inherit {
+  overflow: scroll !important
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-inherit-display {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scroll-inherit-display::-webkit-scrollbar {
+  display: none;
+}
 
 .page-wrapper {
-    margin: 0 auto;
-    max-width: 1400px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
-  }
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+}
 
 
-  .scroller {
-    height: 100vh;
-    max-height: 100%;
-    /* width: 100vw; */
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
+.scroller {
+  height: 100vh;
+  max-height: 100%;
+  /* width: 100vw; */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
 
-  .scroller .scroll-child {
-    scroll-snap-align: start;
-  }
+.scroller .scroll-child {
+  scroll-snap-align: start;
+}
+
+.box-limited::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 2px;
+}
+
+
+/* Track */
+.box-limited::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.box-limited::-webkit-scrollbar-thumb {
+  background: rgba(#666, 0.6);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+.box-limited::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

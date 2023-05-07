@@ -76,16 +76,17 @@ const ProjectDetail: NextPage = (props) => {
       </section>
 
       <section className="scroll-child sticky ">
-        <div className=" w-[100wv] bg-zinc-50 p-20 ">
-          <div className="page-wrapper p-16">
-            <div className={`${subtitle.className} flex relative`}>
+        <div className=" w-[100wv] h-[100vh] bg-zinc-50 p-20 ">
+          <div 
+          className="page-wrapper p-[1vh] scroll-m-3	h-[80vh] overflow-y-scroll relative">
+            <div className={`${subtitle.className} flex relative h-[135vh]`}>
               <aside className="w-3/5">
                 <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12 "></div>
                 <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12  "></div>
                 <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12 "></div>
               </aside>
 
-              <aside className="w-2/5 pl-16 sticky bottom-0">
+              <aside className="w-2/5 pl-16 sticky top-0  h-[50vh]">
 
                 {entities.map((entity, i) => (
                   <div className={`mb-8 ${subtitle.className}`} key={i}>
