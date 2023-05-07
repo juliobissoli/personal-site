@@ -18,7 +18,7 @@ const ProjectDetail: NextPage = (props) => {
   const projectDetail = {
     year: ["2021 - 2022"],
     tasks: ["UI/UX", "Desenvolvimento do sistema web", "Integração com GitLab"],
-    tools: ["Figma", "VueJs", "Insomnia"],
+    tools: ["Figma", "VueJs", "Insomnia", "Docker"],
   };
 
   const entities = [
