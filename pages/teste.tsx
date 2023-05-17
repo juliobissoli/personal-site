@@ -1,9 +1,20 @@
 import Image from 'next/image'
 import { Poppins, Inter, Sora, Manrope } from 'next/font/google'
 import MainMenu from '@/components/mainMenu'
-import { Keyframes, Scroll } from "scrollex";
+import { Scroll } from "scrollex";
 import BannerAside from '@/components/home/bannerAside';
 
+
+const keyframes = {
+  heading: {
+    0: {
+      translateX: -200,
+    },
+    200: {
+      translateX: 200,
+    },
+  },
+};
 
 const poppins = Manrope({ weight: "800", subsets: ["latin"] });
 const subtitle = Manrope({ weight: "400", subsets: ["latin"] });
@@ -32,32 +43,39 @@ export default function Teste() {
       ];
 
 
-const keyframes = {
-    heading: {
-      0: {
-        innerWidth: '100%',
-        translateX: -200,
-      },
-      200: {
-        innerWidth: '50%',
-        translateX: 200,
-      },
-    },
-  };
+// const keyframes = {
+//     heading: {
+//       0: {
+//         // innerWidth: '100%',
+//         translateX: -200,
+//       },
+//       100: {
+//         // innerWidth: '50%',
+//         translateX: 200,
+//       },
+//     },
+//   };
 
       
   return (
   <main>
     <MainMenu></MainMenu>
-    <Scroll.Container scrollAxis='y' className="scroller overflow-y-hidden	">
+    <Scroll.Container scrollAxis='y' className="	">
       {/* <MainMenu></MainMenu> */}
-      <Scroll.Section className="flex  h-[100vh] scroll-child">
-        <Scroll.Item className=" h-full  relative flex items-center justify-end"
-        keyframes={keyframes.heading}
-        >
+      <Scroll.Section className="h-[100vh] w-full flex justify-center items-center bg-zinc-200">
+        <Scroll.Item keyframes={keyframes.heading}>
+          <h1>Page One</h1>
+        </Scroll.Item>
+      </Scroll.Section>
+
+      <Scroll.Section className="flex  h-[100vh]">
+        <div>
+          <Scroll.Item className=" h-full fixed  flex items-center justify-end"
+        keyframes={keyframes.heading}>
+
           <h1
-            className={`${poppins.className} 	 text-7xl w-[40vw] text-right fixed text-zinc-700 mb-[10rem] mr-8`}
-          >
+            className={`${poppins.className} 	 text-7xl w-[40vw] text-right  text-zinc-700 mb-[10rem] mr-8`}
+            >
             Desenvolvedor e{" "}
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               {" "}
@@ -65,7 +83,8 @@ const keyframes = {
             </span>{" "}
             design 
           </h1>
-        </Scroll.Item>
+            </Scroll.Item>
+        </div>
         <div className="w-1/2 h-full  justify-start flex items-center">
           <div className="p-8  z-10 sticky">
             <div className="flex flex-col mt-[40rem] text-left  fixed bottom-0 left-[50%] mb-[5rem] ml-8">
