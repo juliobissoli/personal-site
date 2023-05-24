@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main  className='h-[100vh] box-limited'>
+    <main  className='h-[100vh] '>
       <MainMenu />
       
       <Component {...pageProps} />

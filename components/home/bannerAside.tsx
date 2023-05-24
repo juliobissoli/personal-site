@@ -25,14 +25,15 @@ const BannerAside: React.FC<Props> = ({ title, year, imagePath }) => {
       setMousePos(coords);
       if (din) {
         const isInset =
-          coords.x < din?.right &&
-          coords.x > din?.left &&
-          coords.y < din.bottom &&
-          coords.y > din.top;
-
-          let btn = document.getElementById(`btn-float-${imagePath}`);
+        coords.x < din?.right &&
+        coords.x > din?.left &&
+        coords.y < din.bottom &&
+        coords.y > din.top;
+        
+        let btn = document.getElementById(`btn-float-${imagePath}`);
         if (btn) {
           if (isInset) {
+            console.log(coords)
             setMouseIsVisible(true);
             btn.style.left = coords.x + "px";
             btn.style.top = coords.y + "px";
@@ -65,7 +66,7 @@ const BannerAside: React.FC<Props> = ({ title, year, imagePath }) => {
       () => console.log('veio')
     }> */}
       <button
-        className=" w-20 h-20  absolute  hidden"
+        className=" w-20 h-20  absolute  hidden z-50"
         id={`btn-float-${imagePath}`}
       >
         <span className="bg-zinc-900 z-10 rounded-full w-full h-full absolute flex justify-center items-center text-white">

@@ -1,135 +1,143 @@
-import Image from 'next/image'
-import { Poppins, Inter, Sora, Manrope } from 'next/font/google'
-import MainMenu from '@/components/mainMenu'
-import { Scroll } from "scrollex";
-import BannerAside from '@/components/home/bannerAside';
-
-
-const keyframes = {
-  heading: {
-    0: {
-      translateX: -200,
-    },
-    200: {
-      translateX: 200,
-    },
-  },
-};
+import BannerAside from "@/components/home/bannerAside";
+import { Manrope } from "next/font/google";
+import { Keyframes, Scroll } from "scrollex";
 
 const poppins = Manrope({ weight: "800", subsets: ["latin"] });
 const subtitle = Manrope({ weight: "400", subsets: ["latin"] });
 
+const keyframes: Record<string, Keyframes> = {
+  imageContainer: ({ section }) => ({
+    [section.topAt("container-bottom")]: {
+      translateY: 125,
+      translateX: -250,
+      opacity: 0,
+      rotateX: -25,
+      rotateY: -50,
+      scale: 0.4,
+    },
+    [section.topAt("container-top")]: {
+      translateY: 0,
+      translateX: 0,
+      opacity: 1,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+    },
+    [section.bottomAt("container-top")]: {
+      translateY: -125,
+      translateX: 250,
+      opacity: 0,
+      rotateX: 25,
+      rotateY: 50,
+      scale: 0.4,
+    },
+  }),
+  image: ({ section }) => ({
+    [section.topAt("container-bottom")]: {
+      translateY: -62.5,
+      translateX: 125,
+      scale: .2,
+    },
+    [section.topAt("container-top")]: {
+      translateY: 0,
+      translateX: 0,
+      scale: 1,
+    },
+    [section.bottomAt("container-top")]: {
+      translateY: 62.5,
+      translateX: -325,
+      scale: 2,
+    },
+  }),
 
-export default function Teste() {
+  heading: ({ section }) => ({
+    [section.topAt("container-bottom")]: {
+      translateX: -400,
+      scale: 1.8,
 
-    const projects = [
-        { name: "CodeTime", icon: "icon-cod-time", bgColor: "#333333" },
-        { name: "Linhagua", icon: "icon-linhagua ", bgColor: "#333333" },
-        { name: "StoneBox", icon: "icon-stone-box", bgColor: "#333333" },
-        { name: "Amais", icon: "icon-amais", bgColor: "#333333" },
-      ];
-    
-      const projectsBanner = [
-        {
-          title: "CodTime",
-          year: "2021 - 2022",
-          imagePath: "codtime-splash-img.png",
-        },
-        {
-          title: "ERP-Linhagua",
-          year: "2021 - 2022",
-          imagePath: "linhagua-splash-img.png",
-        },
-      ];
+    },
+    [section.bottomAt("container-top")]: {
+      translateX: -700,
+      scale: 0.8,
+
+    },
+  }),
+};
 
 
-// const keyframes = {
-//     heading: {
-//       0: {
-//         // innerWidth: '100%',
-//         translateX: -200,
-//       },
-//       100: {
-//         // innerWidth: '50%',
-//         translateX: 200,
-//       },
-//     },
-//   };
+const projectsBanner = [
+  {
+    title: "CodTime",
+    year: "2021 - 2022",
+    imagePath: "codtime-splash-img.png",
+  },
+  {
+    title: "ERP-Linhagua",
+    year: "2021 - 2022",
+    imagePath: "linhagua-splash-img.png",
+  },
+];
 
-      
+const Teste = () => {
   return (
-  <main>
-    <MainMenu></MainMenu>
-    <Scroll.Container scrollAxis='y' className="	">
-      {/* <MainMenu></MainMenu> */}
-      <Scroll.Section className="h-[100vh] w-full flex justify-center items-center bg-zinc-200">
-        <Scroll.Item keyframes={keyframes.heading}>
-          <h1>Page One</h1>
-        </Scroll.Item>
-      </Scroll.Section>
-
-      <Scroll.Section className="flex  h-[100vh]">
-        <div>
-          <Scroll.Item className=" h-full fixed  flex items-center justify-end"
-        keyframes={keyframes.heading}>
-
-          <h1
-            className={`${poppins.className} 	 text-7xl w-[40vw] text-right  text-zinc-700 mb-[10rem] mr-8`}
+    <Scroll.Container
+      scrollAxis="y"
+      className="snap-y snap-mandatory h-[100vh] overflow-hidden"
+    >
+      <Scroll.Section className="snap-start h-[100vh] overflow-hidden">
+        <div className="fixed top-0 pointer-events-none flex justify-center items-center w-full h-full overflow-hidden ">
+          <Scroll.Item  keyframes={keyframes.heading} className="">
+            <h1
+              className={`${poppins.className} 	 text-7xl w-[40vw] text-right fixed text-zinc-700  mr-8 mt-[-10vh]`}
             >
-            Desenvolvedor e{" "}
-            <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              {" "}
-              UI/UX{" "}
-            </span>{" "}
-            design 
-          </h1>
-            </Scroll.Item>
-        </div>
-        <div className="w-1/2 h-full  justify-start flex items-center">
-          <div className="p-8  z-10 sticky">
-            <div className="flex flex-col mt-[40rem] text-left  fixed bottom-0 left-[50%] mb-[5rem] ml-8">
-              <div className="flex gap-3">
-                {projects.map((el, i) => (
-                  <div
-                    key={i}
-                    className={`${
-                      i !== 0 ? "border border-zinc-400" : "bg-zinc-800"
-                    } h-[60px] w-[60px] flex justify-center items-center rounded-xl`}
-                  >
-                    <i
-                      className={`icon ${el.icon} ${
-                        i == 0 ? "bg-white" : "bg-zinc-900"
-                      } h-[30px] w-[30px]`}
-                    ></i>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+              Desenvolvedor e{" "}
+              <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                {" "}
+                UI/UX{" "}
+              </span>{" "}
+              design
+            </h1>
+          </Scroll.Item>
         </div>
       </Scroll.Section>
-      {projectsBanner.map((el, i) => (
-        <section className="scroll-child flex justify-between" key={i}>
-          <div className="w-1/2" />
-          <div className=" w-1/2    ">
-            <div className="w-full scroll-child " >
-              <BannerAside
-                title={el.title}
-                year={el.year}
-                imagePath={el.imagePath}
-              ></BannerAside>
+      {projectsBanner.map((el, i) => {
+        return (
+          <Scroll.Section
+            className="snap-start h-[100vh] overflow-hidden"
+            key={i}
+          >
+            <div
+              className="fixed top-0 pointer-events-none flex justify-between items-center w-full h-full overflow-hidden"
+              style={{ perspective: 600, transformStyle: "preserve-3d" }}
+            >
+              <div className="w-[50%]"></div>
+              <Scroll.Item
+                keyframes={keyframes.imageContainer}
+                className="overflow-hidden w-[50%]"
+              >
+                {/* <Scroll.Item ></Scroll.Item> */}
+                <BannerAside
+                  title={el.title}
+                  year={el.year}
+                  imagePath={el.imagePath}
+                ></BannerAside>
+                {/* <img src={el} className="h-[100vh] w-full object-cover	" /> */}
+              </Scroll.Item>
             </div>
-          </div>
-        </section>
-      ))}
-
-      <section className="scroll-child sticky">
-        <div className=" h-[100vh] w-full p-20 bg-zinc-900 z-20">
-        <h1 className={`${subtitle.className} text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600`}>Fale comigo</h1>
+          </Scroll.Section>
+        );
+      })}
+      <Scroll.Section className="snap-start h-[100vh] overflow-hidden">
+        <div className="bg-zinc-900 pointer-events-none flex justify-center items-center w-full h-full overflow-hidden">
+          <h1
+            className={`${subtitle.className} text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600`}
+          >
+            Fale comigo
+          </h1>
         </div>
-      </section>
+      </Scroll.Section>
     </Scroll.Container>
+  );
+};
 
-  </main>
-  )
-}
+export default Teste;
