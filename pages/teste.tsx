@@ -113,7 +113,7 @@ const Teste = () => {
               <div className="w-[50%]"></div>
               <Scroll.Item
                 keyframes={keyframes.imageContainer}
-                className="overflow-hidden w-[50%]"
+                className="overflow-hidden w-[50%] relative"
               >
                 {/* <Scroll.Item ></Scroll.Item> */}
                 <BannerAside

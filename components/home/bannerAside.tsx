@@ -33,11 +33,12 @@ const BannerAside: React.FC<Props> = ({ title, year, imagePath }) => {
         let btn = document.getElementById(`btn-float-${imagePath}`);
         if (btn) {
           if (isInset) {
-            console.log(coords)
             setMouseIsVisible(true);
-            btn.style.left = coords.x + "px";
+            btn.style.left = (coords.x - (din?.right / 2)) + "px";
             btn.style.top = coords.y + "px";
             btn.style.display = "inline-block";
+            btn.style.zIndex = '100';
+            console.log(btn.style.visibility)
           }
 
           else {
