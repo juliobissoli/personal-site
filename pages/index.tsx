@@ -4,11 +4,15 @@ import MainMenu from "@/components/mainMenu";
 import BannerAside from "@/components/home/bannerAside";
 import { useRef } from "react";
 import useOnScreen from "@/utils/isVisible";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const poppins = Manrope({ weight: "800", subsets: ["latin"] });
 const subtitle = Manrope({ weight: "400", subsets: ["latin"] });
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0.2, 2], [0, 1]);
+
   const projects = [
     { name: "CodeTime", icon: "icon-cod-time", bgColor: "#333333" },
     { name: "Linhagua", icon: "icon-linhagua ", bgColor: "#333333" },
@@ -29,28 +33,29 @@ export default function Home() {
     },
   ];
 
-
-
   const ref = useRef<HTMLDivElement>(null);
 
   // const isVisible = useOnScreen(ref);
-
 
   return (
     <main className="scroller overflow-y-hidden	">
       {/* <MainMenu></MainMenu> */}
       <section className="flex  h-[100vh] scroll-child">
         <div className="w-full h-full  relative flex items-center justify-end">
-          <h1
-            className={`${poppins.className} 	 text-7xl w-[40vw] text-right fixed text-zinc-700 mb-[10rem] mr-8`}
+          <motion.div
+            style={{scale}}
           >
-            Desenvolvedor e{" "}
-            <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              {" "}
-              UI/UX{" "}
-            </span>{" "}
-            design 
-          </h1>
+            <h1
+              className={`${poppins.className} 	 text-7xl w-[40vw] text-right fixed text-zinc-700 mb-[10rem] mr-8`}
+            >
+              Desenvolvedor e{" "}
+              <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                {" "}
+                UI/UX{" "}
+              </span>{" "}
+              design
+            </h1>
+        </motion.div>
         </div>
         <div className="w-1/2 h-full  justify-start flex items-center">
           <div className="p-8  z-10 sticky">
@@ -92,7 +97,11 @@ export default function Home() {
 
       <section className="scroll-child sticky">
         <div className=" h-[100vh] w-full p-20 bg-zinc-900 z-20">
-        <h1 className={`${subtitle.className} text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600`}>Fale comigo</h1>
+          <h1
+            className={`${subtitle.className} text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600`}
+          >
+            Fale comigo
+          </h1>
         </div>
       </section>
     </main>
