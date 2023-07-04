@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Manrope } from "next/font/google";
 import MainMenu from "@/components/mainMenu";
 import BannerAside from "@/components/home/bannerAside";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import useOnScreen from "@/utils/isVisible";
 import CardProject from "@/components/home/cardProject";
 import { CarroucelProjects } from "@/components/home/carrolcelProjects";
@@ -19,6 +19,20 @@ export default function Home() {
   ];
 
  
+  useEffect(() => {
+    const handleScroll = () => {
+      // Lógica para manipular o evento de scroll
+      console.log('Scroll capturado!');
+    };
+
+    // Adiciona o listener para o evento de scroll quando o componente monta
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove o listener quando o componente é desmontado
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const ref = useRef<HTMLDivElement>(null);
 
@@ -27,7 +41,7 @@ export default function Home() {
   return (
     <main className="overflow-y-hidden	">
       {/* <MainMenu></MainMenu> */}
-      <section className="flex  h-[100vh]">
+      <section className="h-[100vh]">
         <div className="w-full h-full  flex items-center justify-center">
           <h1
             className={`${poppins.className} 	 text-7xl w-[40vw] text-center text-zinc-700`}
@@ -41,7 +55,7 @@ export default function Home() {
           </h1>
         </div>
       </section>
-      <section className=" mb-16 mx-3">
+      <section className="h-[100vh] flex items-center">
       <CarroucelProjects />
         {/* <div  className={`pl-32 scroll-inherit-display divide-x flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto `}>
           {projectsBanner.map((el, i) => (
