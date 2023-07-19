@@ -1,7 +1,13 @@
 import { useEffect, useRef } from "react";
 import CardProject from "./cardProject";
 
-export const CarroucelProjects = () => {
+
+
+interface Props {
+  onFirstScroll: (value: 'lock' | 'unlock') => void;
+}
+
+export const CarroucelProjects:  React.FC<Props> = ({ onFirstScroll })  => {
   const projectsBanner = [
     {
       title: "CodTime",
@@ -26,11 +32,7 @@ export const CarroucelProjects = () => {
     const carousel = carouselRef.current;
 
     if (carousel) {
-      // carousel.addEventListener('mousedown', handleScroll);
-      // carousel.addEventListener('mouseleave', handleScroll);
-      // carousel.addEventListener('mousedown', handleScroll);
       carousel.addEventListener("wheel", handleScroll);
-      // console.log(carousel);
     }
   }, []);
 
@@ -39,8 +41,11 @@ export const CarroucelProjects = () => {
       carouselRef.current.scrollLeft += event?.deltaY / 2 || 0;
       // carousel.style.scrollBehavior = 'smooth';
       if (carouselRef.current.scrollLeft > 0) {
+        onFirstScroll('lock');
         carouselRef.current.scrollTop -= event?.deltaY || 0;
-        console.log("event => ", carouselRef.current.scrollTop);
+      }
+      else {
+        onFirstScroll('unlock');
       }
     }
   };

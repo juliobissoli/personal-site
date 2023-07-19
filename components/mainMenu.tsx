@@ -1,27 +1,47 @@
-import { Manrope } from "next/font/google";
+import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { Crete_Round, EB_Garamond, Inter, Kadwa, Manrope, Raleway, Sanchez, Sora } from "next/font/google";
 import Link from "next/link";
+// import { LinkedinLogo, BiLogoGithub } from 'react-icons/bi'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 const extraBold = Manrope({ weight: "700", subsets: ["latin"] });
-const textStrong = Manrope({ weight: "500", subsets: ["latin"] });
-const textThin = Manrope({ weight: "300", subsets: ["latin"] });
+const textStrong = Inter({ weight: "700", subsets: ["latin"] });
+const textThin = Inter({ weight: "300", subsets: ["latin"] });
 
 export default function MainMenu() {
   return (
-    <nav className="fixed w-full flex justify-between z-30 px-16 items-center py-2 ">
+    <nav className="fixed h-[100%] lg:w-[6vw] backdrop-blur	bg-white/30 flex flex-col justify-between z-30 items-center">
       <Link
         href={`/`}
-        className="text-2xl py-1 hover:border-zinc-900 border-b border-zinc-50 mix-blend-difference	"
+        className="text-xl py-16 mx-0 uppercase flex gap-1 rotate-90 hover:border-zinc-900 border-b border-zinc-50 "
       >
-        <strong className={textStrong.className}> Juio </strong>
+        <strong className={textStrong.className}> Julio </strong>
         <span className={textThin.className}> Bissoli</span>
       </Link>
-      <button 
-      
-      className={`${extraBold.className} hover:gap-1 flex py-2`}>
-        <span>{"{"}</span>
-        <span>menu</span>
-        <span>{"}"}</span>
-      </button>
+
+      <ul className="flex flex-col items-center gap-4">
+        <li>
+          <button className="text-zinc-700 text-xl">
+            {/* <GithubLogo size={24} weight="light" /> */}
+            {/* <BiLogoGithub /> */}
+            <FaGithub />
+          </button>
+        </li>
+        <li>
+          <button className="text-zinc-700  text-xl">
+            {/* <LinkedinLogo size={24} weight="light" /> */}
+            <FaLinkedinIn />
+          </button>
+        </li>
+        {/* <li>
+          <button className="text-zinc-900">
+            <InstagramLogo size={24} weight="light" />
+          </button>
+        </li> */}
+        <li>
+          <div className="h-[10vh] w-[2px] bg-zinc-700"></div>
+        </li>
+      </ul>
     </nav>
   );
 }
