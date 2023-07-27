@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import CardProject from "./cardProject";
 
@@ -53,18 +54,16 @@ export const CarroucelProjects:  React.FC<Props> = ({ onFirstScroll })  => {
   return (
     <div className="overflow-y-hidden">
       <div
-        className={`px-32 scroll-inherit-display divide-x flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto`}
+        className={`px-32 scroll-inherit-display   flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto mx-2`}
         ref={carouselRef}
       >
         {projectsBanner.map((el, i) => (
-          <div
+          <Link href={`/project/${el.imagePath}`}
             key={i}
-            className={`px-8 border border-x-0 ${
-              i === 0 ? " border-l-[1px]" : ""
-            } ${i === projectsBanner.length - 1 ? "border-l-[1px]" : ""}`}
+            className={`px-8 border-y border-r ${i === 0 ? 'border-l' : ''}`}
           >
             <CardProject projectId={el.imagePath}></CardProject>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

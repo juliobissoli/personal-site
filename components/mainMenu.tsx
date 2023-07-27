@@ -5,15 +5,15 @@ import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 const extraBold = Manrope({ weight: "700", subsets: ["latin"] });
-const textStrong = Inter({ weight: "700", subsets: ["latin"] });
-const textThin = Inter({ weight: "300", subsets: ["latin"] });
+const textStrong = Manrope({ weight: "700", subsets: ["latin"] });
+const textThin = Manrope({ weight: "300", subsets: ["latin"] });
 
 export default function MainMenu() {
   return (
     <nav className="fixed h-[100%] lg:w-[6vw] backdrop-blur	bg-white/30 flex flex-col justify-between z-30 items-center">
       <Link
         href={`/`}
-        className="text-xl py-16 mx-0 uppercase flex gap-1 rotate-90 hover:border-zinc-900 border-b border-zinc-50 "
+        className="text-xl py-16 mx-0  flex gap-1 rotate-90 hover:border-zinc-950 border-b border-zinc-50 "
       >
         <strong className={textStrong.className}> Julio </strong>
         <span className={textThin.className}> Bissoli</span>

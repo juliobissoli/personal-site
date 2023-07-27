@@ -1,3 +1,4 @@
+import { BannerAnimate } from "@/components/bannerAnimate";
 import FooterScream from "@/components/footerScream";
 import MainMenu from "@/components/mainMenu";
 import { ArrowLeft, Timer } from "@phosphor-icons/react";
@@ -34,18 +35,24 @@ const ProjectDetail: NextPage = (props) => {
   });
 
   return (
-    <main className="scroller overflow-y-hidden	">
-      <section className="flex  h-[100vh] scroll-child">
-        <aside className="relative h-[100vh] w-1/2 ">
-          <button className="w-12 h-12 rounded-full absolute top-16 left-16 z-10 bg-white flex items-center justify-center border">
+    <main className="page-wrapper relative">
+       <button className="w-12 h-12 rounded-full absolute my-8 left-16 z-10 bg-white flex items-center justify-center border">
             <Link href={`/`} className="flex gap-2">
               <ArrowLeft size={22} />
             </Link>
           </button>
-          <img
-            src={`/${imgUrl}`}
-            className="h-full w-full object-cover border-0"
-          />
+      <section className="w-full h-[70vh] text-right border-r p-8">
+          <BannerAnimate projectId={imgUrl} />
+          <h1 className="text-4xl mt-16">{imgUrl}</h1>
+      </section>
+
+      <section className="h-[100vh] scroll-child">
+        <aside className="relative h-[100vh] w-full ">
+          {/* <button className="w-12 h-12 rounded-full absolute top-16 left-16 z-10 bg-white flex items-center justify-center border">
+            <Link href={`/`} className="flex gap-2">
+              <ArrowLeft size={22} />
+            </Link>
+          </button> */}
           <div className="absolute  top-0">
             <div className={`w-ful flex justify-start flex-col p-8`}></div>
           </div>

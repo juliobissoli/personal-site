@@ -60,7 +60,7 @@ export default function Home() {
       <section className="h-[100vh]">
         <div className="w-full h-full  flex items-center justify-center">
           <h1
-            className={`${poppins.className} 	 text-7xl w-[40vw] text-center text-zinc-700`}
+            className={`${poppins.className} fade-in text-7xl w-[40vw] text-center text-zinc-700`}
           >
             Desenvolvedor e{" "}
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
