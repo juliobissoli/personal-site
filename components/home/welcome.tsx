@@ -29,8 +29,8 @@ export const WelcomeHome = () => {
             {/* Contruindo sua ideia desde a concepção ao produto final */}
           </h3>
         </aside>
-        <aside className="border-l h-full lg:w-[5vw]  md:w-[6vw] w-[10vw] ">
-          <span className="rotate-90">Aqui</span>
+        <aside className="border-l h-full lg:w-[5vw]  md:w-[6vw] w-[10vw] bg-zinc-100">
+          <span className="-rotate-90  whitespace-nowrap sm:text-xs md:text-sm tracking-wider uppercase">Aqui</span>
         </aside>
       </div>
     </div>

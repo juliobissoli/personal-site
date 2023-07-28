@@ -54,13 +54,13 @@ export const CarroucelProjects:  React.FC<Props> = ({ onFirstScroll })  => {
   return (
     <div className="overflow-y-hidden">
       <div
-        className={`px-32 scroll-inherit-display   flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto mx-2`}
+        className={` scroll-inherit-display   flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto`}
         ref={carouselRef}
       >
         {projectsBanner.map((el, i) => (
           <Link href={`/project/${el.imagePath}`}
             key={i}
-            className={`px-8 border-y border-r ${i === 0 ? 'border-l' : ''}`}
+            className={` border-y border-r ${i === 0 ? 'border-l' : ''}`}
           >
             <CardProject projectId={el.imagePath}></CardProject>
           </Link>

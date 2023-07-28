@@ -132,7 +132,7 @@ export default function Home() {
         {projectsBanner.map((el, i) => (
           <Link href={`/project/${el.imagePath}`}
             key={i}
-            className={`px-8 border-y border-r ${i === 0 ? 'border-l' : ''}`}
+            className={`border-y border-r ${i === 0 ? 'border-l' : ''}`}
           >
             <CardProject projectId={el.imagePath}></CardProject>
           </Link>
