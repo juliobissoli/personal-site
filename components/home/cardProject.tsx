@@ -14,7 +14,7 @@ const CardProject: React.FC<Props> = ({ projectId }) => {
 
 
   return (
-    <div className="w-[100vh] h-[80vh] m-8">
+    <div className="w-[1024px] h-[80vh] m-8">
       <header className="flex justify-between mb-2">
         <h3 className={`text-2xl text-zinc-900 ${subtitle.className}`}>CodTime</h3>
         <span className={`text-2xl text-zinc-900 ${subtitle.className}`}>2019 - 2020</span>

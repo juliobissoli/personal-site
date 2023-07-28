@@ -33,3 +33,9 @@
     mask-repeat: no-repeat;
     mask-size: 100%;
   }
+
+  .icon-logo {
+    mask: url(./svg/logo.svg);
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+  }
