@@ -1,0 +1,32 @@
+[
+  {
+    "id": "codtime",
+    "title": "CodTime",
+    "year": "2021 - 2022",
+    "imagePath": "codtime-splash-img.png",
+    "images": ["codtime-splash-img.png", "linhagua-splash-img.png"],
+    "description": "Sistema de gêrencia de horas de trabalho integrado ao GitLab. ",
+    "activities": ["UI/UX", "Desenvolvimento sistema web", "Integração com GitLab"],
+    "tools": ["Figma", "Node", "Vue", "Insomnia"]
+  },
+  {
+    "id": "erp-linhagua",
+    "title": "ERP-Linhagua",
+    "year": "2010 - 2020",
+    "imagePath": "linhagua-splash-img.png",
+    "images": ["linhagua-splash-img.png"],
+    "description": "",
+    "activities": [],
+    "tools": []
+  },
+  {
+    "id": "stonebox",
+    "title": "Stonebox",
+    "year": "2021 - 2022",
+    "imagePath": "linhagua-splash-img.png",
+    "images": ["linhagua-splash-img.png"],
+    "description": "",
+    "activities": [],
+    "tools": []
+  }
+]

@@ -24,7 +24,7 @@ export const WelcomeHome = () => {
             </span>{" "}
           </h1>
 
-          {/* <span className="text-3xl px-4 text-zinc-500">Contruindo sua ideia desde a concepção ao produto final</span> */}
+          <span className="text-3xl px-4 text-zinc-500">Contruindo sua ideia desde a concepção até produto final</span>
           <div
             className={`${textThin.className} text-zinc-600 text-md uppercase w-full flex w-full justify-end text-right px-4   border-t pt-4`}
           >

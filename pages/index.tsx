@@ -1,100 +1,11 @@
-import Image from "next/image";
-import { Manrope } from "next/font/google";
-import MainMenu from "@/components/mainMenu";
-import BannerAside from "@/components/home/bannerAside";
 import { useEffect, useRef, useState } from "react";
-import useOnScreen from "@/utils/isVisible";
 import CardProject from "@/components/home/cardProject";
-import { CarroucelProjects } from "@/components/home/carrolcelProjects";
-import { InView, useInView } from "react-intersection-observer";
 import { WelcomeHome } from "@/components/home/welcome";
 import Link from "next/link";
-
-const poppins = Manrope({ weight: "800", subsets: ["latin"] });
-const subtitle = Manrope({ weight: "400", subsets: ["latin"] });
-
-// export default function Home() {
-//   const projectsBanner = [
-//     {
-//       title: "CodTime",
-//       year: "2021 - 2022",
-//       imagePath: "codtime-splash-img.png",
-//     },
-//     {
-//       title: "ERP-Linhagua",
-//       year: "2021 - 2022",
-//       imagePath: "linhagua-splash-img.png",
-//     },
-//     {
-//       title: "ERP-Linhagua",
-//       year: "2021 - 2022",
-//       imagePath: "linhagua-splash-img.png",
-//     },
-//   ];
-
-//   const [scrollLocked, setLocked] = useState(false);
-
-//   const { ref, inView } = useInView({
-//     threshold: 1, // 100% visível
-//     onChange: (inView) => {
-//       console.log("=> ", inView);
-//       if (!inView) {
-//         // setLocked(false)
-//       }
-//     },
-//   });
-
-//   return (
-//     <main
-//       className={`h-[100vh]  scroll-inherit-display  scroll-inherit-display   flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto`}
-//     >
-//       <WelcomeHome />
-//       <section
-//         ref={ref}
-//         className="h-[100vh]"
-//       >
-//         {/* <CarroucelProjects
-//           onFirstScroll={(value) => {
-//             //  console.log(value,   scrollLocked, inView)
-//             if (value === "lock" && !scrollLocked) {
-//               setLocked(true);
-//             }
-//             if (value === "unlock" && !scrollLocked) {
-//               // console.log('desbloqueia')
-//               setLocked(false);
-//             }
-//           }}
-//         /> */}
-//         <div  className={`pl-32 scroll-inherit-display divide-x flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto `}>
-//           {projectsBanner.map((el, i) => (
-//             <div key={i} className="">
-//               <CardProject projectId={el.imagePath}></CardProject>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-//     </main>
-//   );
-// }
+import ProjectsData from "../data/projects.json"
 
 export default function Home() {
-  const projectsBanner = [
-    {
-      title: "CodTime",
-      year: "2021 - 2022",
-      imagePath: "codtime-splash-img.png",
-    },
-    {
-      title: "ERP-Linhagua",
-      year: "2021 - 2022",
-      imagePath: "linhagua-splash-img.png",
-    },
-    {
-      title: "ERP-Linhagua",
-      year: "2021 - 2022",
-      imagePath: "linhagua-splash-img.png",
-    },
-  ];
+  const projectsBanner = ProjectsData 
 
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -130,11 +41,11 @@ export default function Home() {
          <WelcomeHome />
         </div>
         {projectsBanner.map((el, i) => (
-          <Link href={`/project/${el.imagePath}`}
+          <Link href={`/project/${el.id}`}
             key={i}
             className={`border-y border-r ${i === 0 ? 'border-l' : ''}`}
           >
-            <CardProject projectId={el.imagePath}></CardProject>
+            <CardProject projectImg={el.imagePath}></CardProject>
           </Link>
         ))}
       </div>

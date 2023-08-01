@@ -8,120 +8,137 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import ProjectsData from "../../data/projects.json";
 
-const subtitle = Manrope({ weight: "400", subsets: ["latin"] });
+const textBold = Manrope({ weight: "800", subsets: ["latin"] });
+const textRegular = Manrope({ weight: "400", subsets: ["latin"] });
+const textLight = Manrope({ weight: "200", subsets: ["latin"] });
 
 const ProjectDetail: NextPage = (props) => {
+  const projectsMap = new Map(ProjectsData.map((el) => [el.id, el]));
+
   const router = useRouter();
 
   const [imgUrl, setImg] = useState("");
 
-  const projectDetail = {
-    year: ["2021 - 2022"],
-    tasks: ["UI/UX", "Desenvolvimento do sistema web", "Integração com GitLab"],
-    tools: ["Figma", "VueJs", "Insomnia"],
+  const defaultProjectData = {
+    id: "",
+    title: "",
+    year: "",
+    imagePath: "",
+    images: [],
+    description: "",
+    activities: [],
+    tools: [],
   };
 
-  const entities = [
-    { value: "year", label: "Ano" },
-    { value: "tasks", label: "Atividades" },
-    { value: "tools", label: "Ferramentas" },
-  ];
+  const [projectData, setProjectData] = useState(defaultProjectData);
 
   useEffect(() => {
-    const url = router?.query?.id?.toString() || "";
-    setImg(url);
-    console.log("veio => ", imgUrl);
+    const id = router?.query?.id?.toString() || "";
+    // setImg(url);
+    const project = projectsMap.get(id);
+    if (project) {
+      setProjectData(project);
+    }
+    console.log("veio => ", projectData);
   });
 
   return (
-    <main className="page-wrapper relative">
-       <button className="w-12 h-12 rounded-full absolute my-8 left-16 z-10 bg-white flex items-center justify-center border">
-            <Link href={`/`} className="flex gap-2">
-              <ArrowLeft size={22} />
-            </Link>
-          </button>
-      <section className="w-full h-[70vh] text-right border-r p-8">
-          <BannerAnimate projectId={imgUrl} />
-          <h1 className="text-4xl mt-16">{imgUrl}</h1>
-      </section>
-
-      <section className="h-[100vh] scroll-child">
-        <aside className="relative h-[100vh] w-full ">
-          {/* <button className="w-12 h-12 rounded-full absolute top-16 left-16 z-10 bg-white flex items-center justify-center border">
-            <Link href={`/`} className="flex gap-2">
-              <ArrowLeft size={22} />
-            </Link>
-          </button> */}
-          <div className="absolute  top-0">
-            <div className={`w-ful flex justify-start flex-col p-8`}></div>
-          </div>
-        </aside>
-        <aside className="w-1/2 h-full relative justify-start flex items-center">
-          <div className="fixed px-8 mt-[-62px]">
-            <Timer size={48} weight="light" />{" "}
-            <h1 className={`text-8xl  text-zinc-900 ${subtitle.className}`}>
-              ERP-Linhagua
+    <div className="flex justify-center relative">
+      <main className="w-[80vw] border">
+        <header className=" w-full flex flex-col border-b px-8 pb-4 ">
+          <Link
+            href={`/`}
+            className="my-4 rounded-full  backdrop-blur	bg-white/30 fixed p-2 z-10"
+          >
+            <ArrowLeft className="text-2xl" weight="thin" />
+          </Link>
+          <div className="flex justify-between mt-16">
+            <h1 className={`${textBold.className} text-4xl`}>
+              {projectData.title}
+            </h1>
+            <h1 className={`${textLight.className} text-4xl`}>
+              {projectData.year}
             </h1>
           </div>
-        </aside>
-      </section>
-      <section className="scroll-child flex justify-between">
-        <div className=" w-1/2    ">
-          <div className="w-full scroll-child ">
-            <aside className="h-[100vh] w-full p-8 flex justify-center items-center">
-              <span
-                className={`text-4xl text-center w-4/6 text-zinc-700 font-thin ${subtitle.className}`}
+        </header>
+
+        <section className="w-full h-[80vh] p-8">
+          <BannerAnimate projectId={projectData.imagePath} />
+        </section>
+
+        <section
+          className={`${textBold.className} text-zinc-500 mt-8 text-[5vw] p-8`}
+        >
+          "{projectData.description}"
+        </section>
+
+        <section className="flex p-8 mt-16 relative">
+          <aside className="w-3/5 flex flex-col gap-16">
+            {projectData.images.map((el) => (
+              <div className="h-[70vh]">
+                <img
+                  src={`/${el}`}
+                  key={el}
+                  className="fade-in h-full w-full object-cover border-0"
+                />
+              </div>
+            ))}
+          </aside>
+
+          <aside className="px-8 w-2/5 flex flex-col ">
+            <div className="flex flex-col mb-8">
+              <small
+                className={`${textRegular.className} border-b border-zinc-800 text-zinc-500 text-sm`}
               >
-                “O primeiro!! Esse sistema aulixia na gerencia de toda produção
-                de uma emporesa envasodoa de água mineral”
+                {" "}
+                Ano:
+              </small>
+              <span className={`${textRegular.className} text-2xl py-2`}>
+                {" "}
+                {projectData.year}
               </span>
-            </aside>
-          </div>
-        </div>
-        <div className="w-1/2" />
-      </section>
-
-      <section className="scroll-child sticky ">
-        <div className=" w-[100wv] h-[100vh] bg-zinc-50 p-20 ">
-          <div 
-          className="page-wrapper p-[1vh] scroll-m-3	h-[80vh] overflow-y-scroll relative">
-            <div className={`${subtitle.className} flex relative h-[135vh]`}>
-              <aside className="w-3/5">
-                <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12 "></div>
-                <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12  "></div>
-                <div className="w-full h-[45vh] rounded-xl bg-zinc-100 border mb-12 "></div>
-              </aside>
-
-              <aside className="w-2/5 pl-16 sticky top-0  h-[50vh]">
-
-                {entities.map((entity, i) => (
-                  <div className={`mb-8 ${subtitle.className}`} key={i}>
-                    <h3
-                      className={`${subtitle.className} text-2xl py-1 text-sm text-zinc-500 w-full border-b border-zinc-900`}
-                    >
-                      {entity.label}
-                    </h3>
-                    <ul>
-                      {(projectDetail as any)[entity.value].map((el: any, j: number) => (
-                        <li className={`${subtitle.className} text-2xl py-1`} key={j}>
-                          {el}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </aside>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="scroll-child sticky">
-        <FooterScream />
-      </section>
-    </main>
- 
+            <div className="flex flex-col mb-8">
+              <small
+                className={`${textRegular.className} border-b border-zinc-800 text-zinc-500 text-sm`}
+              >
+                {" "}
+                Atividades:
+              </small>
+              {projectData.activities.map((el) => (
+                <span
+                  className={`${textRegular.className} text-2xl py-2`}
+                  key={el}
+                >
+                  {" "}
+                  {el}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-col mb-8">
+              <small
+                className={`${textRegular.className} border-b border-zinc-800 text-zinc-500 text-sm`}
+              >
+                {" "}
+                Ferramentas:
+              </small>
+              {projectData.tools.map((el) => (
+                <span
+                  className={`${textRegular.className} text-2xl py-2`}
+                  key={el}
+                >
+                  {" "}
+                  {el}
+                </span>
+              ))}
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
   );
 };
 
