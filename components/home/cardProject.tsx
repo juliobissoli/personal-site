@@ -1,17 +1,14 @@
 import { Manrope } from "next/font/google";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+
 
 interface Props {
-  projectId: string;
+  projectImg: string;
 }
 
 const title = Manrope({ weight: "700", subsets: ["latin"] });
 const subtitle = Manrope({ weight: "400", subsets: ["latin"] });
 
-
-
-const CardProject: React.FC<Props> = ({ projectId }) => {
+const CardProject: React.FC<Props> = ({ projectImg }) => {
 
 
   return (
@@ -21,7 +18,7 @@ const CardProject: React.FC<Props> = ({ projectId }) => {
         <span className={`text-2xl text-zinc-900 ${subtitle.className}`}>2019 - 2020</span>
       </header>
       <div className="px-16 mt-8">
-      <img src={projectId} className="h-[75vh] w-full  object-cover" />
+      <img src={projectImg} className="h-[75vh] w-full  object-cover" />
       </div>
 
     </div>
