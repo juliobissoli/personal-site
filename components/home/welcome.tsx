@@ -1,5 +1,6 @@
 import { ArrowArcRight, ArrowRight } from "@phosphor-icons/react";
 import { Inter, Manrope } from "next/font/google";
+import { CompaniesLogos } from "./companiesLogos";
 
 const textStrong = Manrope({ weight: "800", subsets: ["latin"] });
 const textThin = Manrope({ weight: "300", subsets: ["latin"] });
@@ -24,7 +25,9 @@ export const WelcomeHome = () => {
             </span>{" "}
           </h1>
 
-          <span className="text-3xl px-4 text-zinc-500">Contruindo sua ideia desde a concepção até produto final</span>
+          <span className="text-3xl px-4 text-zinc-500">
+            Contruindo sua ideia desde a concepção até produto final
+          </span>
           <div
             className={`${textThin.className} text-zinc-600 text-md uppercase w-full flex w-full justify-end text-right px-4   border-t pt-4`}
           >
@@ -33,11 +36,18 @@ export const WelcomeHome = () => {
               <ArrowRight className="text-md" weight="thin" />
             </a>
           </div>
+          {/* <div className="h-16">
+            <CompaniesLogos />
+          </div> */}
         </aside>
-        <aside className="border-l h-full lg:w-[5vw]  md:w-[6vw] w-[10vw] bg-zinc-50">
-          <span className="-rotate-90  whitespace-nowrap sm:text-xs md:text-sm tracking-wider uppercase">
+        <aside className="border-l h-full lg:w-[5vw]  md:w-[6vw] w-[10vw] ">
+          {/* <span className="-rotate-90  whitespace-nowrap sm:text-xs md:text-sm tracking-wider uppercase">
             Aqui
-          </span>
+          </span> */}
+
+          <div className="h-full">
+            <CompaniesLogos />
+          </div>
         </aside>
       </div>
     </div>
