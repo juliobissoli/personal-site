@@ -7,44 +7,42 @@ const textThin = Manrope({ weight: "300", subsets: ["latin"] });
 
 export const WelcomeHome = () => {
   return (
-    <div className="w-[100vw] h-[100vh] lg:pl-[5vw]  md:pl-[6vw] pl-[10vw]">
+    <div className="w-[112vw] md:w-[108vw] lg:w-[105vw] h-[100vh] lg:pl-[5vw]  md:pl-[6vw] pl-[10vw]">
       <div className="flex justify-between h-full border-l">
-        <aside className="py-16 h-full lg:w-[95vw]  md:w-[94vw] w-[80vw] flex flex-col justify-between">
-          <h3 className="px-4 text-2xl text-zinc-900 border-b pb-4 ">
-            <strong className={textStrong.className}> Julio </strong>
-            <span className={textThin.className}> Bissoli</span>
-          </h3>
+        <aside className=" h-full md:w-[108vw] lg:w-[105vw] flex flex-col justify-between">
+          {/* <header className="pt-8 md:pt-16 "> */}
+          <header className="h-[88px] md:h-[120px] border-b flex items-end">
+            <h3 className="p-4 text-2xl text-zinc-900 ">
+              <strong className={textStrong.className}> Julio </strong>
+              <span className={textThin.className}> Bissoli</span>
+            </h3>
+          </header>
           <h1
-            className={`${textStrong.className} px-4 fade-in text-[8vw] sm:text-[20vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] w-[80vw] w-[90vw] lg:w-[80vw] flex flex-wrap text-center text-zinc-700`}
+            className={`${textStrong.className} px-4 md:px-16 fade-in text-[10vw] sm:text-[20vw] md:text-[10vw] lg:text-[8vw] w-[80vw] w-[90vw] lg:w-[80vw] flex flex-wrap text-center text-zinc-700`}
           >
             Desenvolvedor {"&"}
             <span
-              className={`${textStrong.className}font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-indigo-700 lg:mt-[-5vh]`}
+              className={`${textStrong.className}font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-indigo-700 lg:mt-[-6vh]`}
             >
               UI/UX design
             </span>{" "}
           </h1>
 
           <span className="text-3xl px-4 text-zinc-500">
-            Contruindo sua ideia desde a concepção até produto final
+            {/* Contruindo sua ideia desde a concepção até produto final */}
           </span>
-          <div
-            className={`${textThin.className} text-zinc-600 text-md uppercase w-full flex w-full justify-end text-right px-4   border-t pt-4`}
+          <footer
+            className={`${textThin.className} h-[88px] md:h-[120px]  text-zinc-600 text-md uppercase w-full flex w-full justify-end text-right px-4   border-t`}
           >
-            <a className="flex items-center gap-3 ">
-              <span className=""> Principais trabalhos </span>
-              <ArrowRight className="text-md" weight="thin" />
-            </a>
-          </div>
-          {/* <div className="h-16">
-            <CompaniesLogos />
-          </div> */}
+            <div className="mt-4">
+              <a className="flex items-center gap-3 ">
+                <span className=""> Principais trabalhos </span>
+                <ArrowRight className="text-md" weight="thin" />
+              </a>
+            </div>
+          </footer>
         </aside>
-        <aside className="border-l h-full lg:w-[5vw]  md:w-[6vw] w-[10vw] ">
-          {/* <span className="-rotate-90  whitespace-nowrap sm:text-xs md:text-sm tracking-wider uppercase">
-            Aqui
-          </span> */}
-
+        <aside className="border-l h-full lg:w-[5vw]  md:w-[8vw] w-[12vw] ">
           <div className="h-full">
             <CompaniesLogos />
           </div>

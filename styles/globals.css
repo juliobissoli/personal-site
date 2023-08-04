@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 @import './icons/icons.css';
+
 
 * {
   font-family: 'Manrope', sans-serif;
@@ -85,4 +84,26 @@
 /* Aplicando a animação a um elemento com a classe "fade-in" */
 .fade-in {
   animation: fadeIn 500ms ease;
+}
+
+
+@keyframes scroll {
+	0% { transform: translateY(0); }
+	100% { transform: translateY(calc(-250px * 6))}
+}
+
+.slide-track {
+  animation: scroll 100s linear infinite;
+  display: flex;
+  /* height: calc(250px * 14); */
+}
+
+
+
+.cursor-squad {
+  cursor: url('../public/cursor_squad.svg'), auto; /* Define a imagem SVG como cursor do mouse */
+}
+
+.cursor-show-more {
+  cursor: url('../public/cursor_show_more.svg'), auto; /* Define a imagem SVG como cursor do mouse */
 }

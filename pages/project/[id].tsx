@@ -45,8 +45,8 @@ const ProjectDetail: NextPage = (props) => {
   });
 
   return (
-    <div className="flex justify-center relative">
-      <main className="w-[80vw] border">
+    <div className="flex justify-center relative pl-12 md:pl-0">
+      <main className="w-[90vw] md:w-[80vw] border">
         <header className=" w-full flex flex-col border-b px-8 pb-4 ">
           <Link
             href={`/`}
@@ -54,7 +54,7 @@ const ProjectDetail: NextPage = (props) => {
           >
             <ArrowLeft className="text-2xl" weight="thin" />
           </Link>
-          <div className="flex justify-between mt-16">
+          <div className="flex flex-col md:flex-row justify-between mt-16">
             <h1 className={`${textBold.className} text-4xl`}>
               {projectData.title}
             </h1>
@@ -69,13 +69,18 @@ const ProjectDetail: NextPage = (props) => {
         </section>
 
         <section
-          className={`${textBold.className} text-zinc-500 mt-8 text-[5vw] p-8`}
+          className={`${textBold.className} min-h-[100vh] text-zinc-500 mt-16 text-[5vw] p-8`}
         >
           "{projectData.description}"
         </section>
 
-        <section className="flex p-8 mt-16 relative">
-          <aside className="w-3/5 flex flex-col gap-16">
+        <span
+          className={`px-4 md:px-8 ${textRegular.className} uppercase text-zinc-500 `}
+        >
+          Mais detalhes:
+        </span>
+        <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t">
+          <aside className="w-full md:w-3/5 flex flex-col gap-16">
             {projectData.images.map((el) => (
               <div className="h-[70vh]">
                 <img
@@ -87,7 +92,7 @@ const ProjectDetail: NextPage = (props) => {
             ))}
           </aside>
 
-          <aside className="px-8 w-2/5 flex flex-col ">
+          <aside className="px-2 md:px-8 w-full md:w-2/5 flex flex-col ">
             <div className="flex flex-col mb-8">
               <small
                 className={`${textRegular.className} border-b border-zinc-800 text-zinc-500 text-sm`}
