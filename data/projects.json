@@ -20,11 +20,11 @@
     "tools": []
   },
   {
-    "id": "stonebox",
-    "title": "Stonebox",
-    "year": "2021 - 2022",
-    "imagePath": "linhagua-splash-img.png",
-    "images": ["linhagua-splash-img.png"],
+    "id": "driveranalytics",
+    "title": "Driver Analytics",
+    "year": "2022",
+    "imagePath": "da-banner-image.png",
+    "images": ["da-banner-image.png"],
     "description": "",
     "activities": [],
     "tools": []
