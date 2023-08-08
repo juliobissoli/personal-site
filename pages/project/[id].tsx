@@ -45,15 +45,15 @@ const ProjectDetail: NextPage = (props) => {
   });
 
   return (
-    <div className="flex justify-center relative pl-12 md:pl-0">
-      <main className="w-[90vw] md:w-[80vw] border">
-        <header className=" w-full flex flex-col border-b px-8 pb-4 ">
+    <div className="flex justify-center  pl-12 md:pl-0">
+      <main className="w-[90vw] md:w-[80vw] relative border">
           <Link
             href={`/`}
-            className="my-4 rounded-full  backdrop-blur	bg-white/30 fixed p-2 z-10"
+            className="my-4 rounded-full  backdrop-blur	bg-white/30 fixed mx-8  p-2 z-10"
           >
             <ArrowLeft className="text-2xl" weight="thin" />
           </Link>
+        <header className=" w-full flex flex-col border-b px-8 pb-4  sticky top-0 ">
           <div className="flex flex-col md:flex-row justify-between mt-16">
             <h1 className={`${textBold.className} text-4xl`}>
               {projectData.title}
@@ -64,12 +64,12 @@ const ProjectDetail: NextPage = (props) => {
           </div>
         </header>
 
-        <section className="w-full h-[80vh] p-8">
+        <section className="w-full h-[80vh] p-8  sticky top-0 bg-white">
           <BannerAnimate projectId={projectData.imagePath} />
         </section>
 
         <section
-          className={`${textBold.className} min-h-[100vh] text-zinc-500 mt-16 text-[5vw] p-8`}
+          className={`${textBold.className} min-h-[100vh] text-zinc-500 mt-16 text-[5vw] p-8  sticky top-0 bg-white flex items-center`}
         >
           "{projectData.description}"
         </section>
@@ -79,7 +79,7 @@ const ProjectDetail: NextPage = (props) => {
         >
           Mais detalhes:
         </span>
-        <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t">
+        <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t sticky top-0 bg-white">
           <aside className="w-full md:w-3/5 flex flex-col gap-16">
             {projectData.images.map((el) => (
               <div className="h-[70vh]">
