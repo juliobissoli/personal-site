@@ -21,7 +21,7 @@ const ProjectDetail: NextPage = (props) => {
 
   const [imgUrl, setImg] = useState("");
 
-  const defaultProjectData = {
+  const defaultProjectData: any = {
     id: "",
     title: "",
     year: "",
@@ -82,7 +82,7 @@ const ProjectDetail: NextPage = (props) => {
         </span>
         <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t sticky- top-0 bg-white">
           <aside className="w-full md:w-3/5 flex flex-col gap-16">
-            {projectData.images.map((el) => (
+            {projectData.images.map((el: any) => (
               <div key={el} className=" border rounded-sm">
                 <img
                   src={`/${el}`}
@@ -113,7 +113,7 @@ const ProjectDetail: NextPage = (props) => {
                 {" "}
                 Atividades:
               </small>
-              {projectData.activities.map((el) => (
+              {projectData.activities.map((el: any) => (
                 <span
                   className={`${textRegular.className} text-2xl py-2`}
                   key={el}
@@ -130,7 +130,7 @@ const ProjectDetail: NextPage = (props) => {
                 {" "}
                 Ferramentas:
               </small>
-              {projectData.tools.map((el) => (
+              {projectData.tools.map((el: any) => (
                 <span
                   className={`${textRegular.className} text-2xl py-2`}
                   key={el}
