@@ -4,17 +4,31 @@
     "title": "CodTime",
     "year": "2022",
     "imagePath": "codtime-splash-img.png",
-    "images": ["codtime-splash-img.png", "linhagua-splash-img.png"],
+    "images": [
+      "codtime/projects-1.png",
+      "codtime/statisticss-1.png",
+      "codtime/welcome-1.png",
+      "codtime-splash-img.png"
+    ],
     "description": "A primeira versão do CodTime surgiu por uma necessidade pessoal, precisava de uma sistam facil e simples que registrase as horas que eu trabalhei nos projetos freelancer que estava desenvolvendo, porem  todos do mercada ou eram muito complexos ou voltados para empresas, então decidi fazer o meu proprio sistema de registro de horas.  Logo depois ele se torou meu PG (Projeto de Gradução na UFFES), onde a ideia crescel e se tornou um  sistema de gêrencia de horas de trabalho integrado ao GitLab, com enfaze em produtividade de equipes de desenvolvedores utilizando o SCRUM como base",
-    "activities": ["UI/UX", "Desenvolvimento sistema web", "Integração com GitLab"],
-    "tools": ["Figma", "Node", "Vue", "Vercel","Insomnia"]
+    "activities": [
+      "UI/UX",
+      "Desenvolvimento sistema web",
+      "Integração com GitLab"
+    ],
+    "tools": ["Figma", "Node", "Vue", "Vercel", "Insomnia"]
   },
   {
     "id": "erp-linhagua",
     "title": "ERP-Linhagua",
     "year": "2020",
     "imagePath": "linhagua-splash-img.png",
-    "images": ["linhagua-splash-img.png"],
+    "images": [
+      "linhagua/dashboard.png",
+      "linhagua/expenses-1.png",
+      "linhagua/schedule-1.png",
+      "linhagua-splash-img.png"
+    ],
     "description": "O ponta de lansa! esse sistema foi meu primeiro projeto para terceiro, desenvolvi um ERP (Sistema de Gestão Empresarial) que foi construido para agiliza todo o processo de produção de uma empresa de envase de água mineral, dezde o agendamento ao pagamento dos clientes, abarcabdo todos os processos da empresa.",
     "activities": ["UI/UX", "Back-end", "Front-end"],
     "tools": ["Vue", "AdonisJS", "PostgreSQL", "Docker", "Heroku", "Vercel"]
@@ -24,7 +38,13 @@
     "title": "Driver Analytics",
     "year": "2023",
     "imagePath": "da-banner-image.png",
-    "images": ["da-banner-image.png"],
+    "images": [
+      "DA/dashborad-1.png",
+      "DA/events-1.png",
+      "DA/map-dark-1.png",
+      "DA/map-light-1.png",
+      "DA/map-light-2.png"
+    ],
     "description": "Lidero um dos principais projetos da Motora.ai onde faço parte da equipe de desenvolvimento. O poartal Driver Analytics e um sistema web que lida com todo processo de gestão da condução dos motoristas dos clientes. Onde eles tem acesso a todas informações geradas pelo equipamento IOT instalados nos veículos, que monitoram por meio de Inteligencia Artificial os motoristas.",
     "activities": ["Back-end", "Front-end", "Ajustes de UI/UX"],
     "tools": ["Agular", "Leaflet", "Node", "MongoDB", "Figma"]

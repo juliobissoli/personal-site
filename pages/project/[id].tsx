@@ -83,10 +83,10 @@ const ProjectDetail: NextPage = (props) => {
         <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t sticky- top-0 bg-white">
           <aside className="w-full md:w-3/5 flex flex-col gap-16">
             {projectData.images.map((el) => (
-              <div key={el} className="h-[70vh]">
+              <div key={el} className=" border rounded-sm">
                 <img
                   src={`/${el}`}
-                  className="fade-in h-full w-full object-cover border-0"
+                  className="fade-in h-full w-full object-cover border-0  rounded-sm"
                 />
               </div>
             ))}
