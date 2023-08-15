@@ -3,14 +3,14 @@ import FooterScream from "@/components/footerScream";
 import MainMenu from "@/components/mainMenu";
 import { ArrowLeft, Timer } from "@phosphor-icons/react";
 import { NextPage } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import ProjectsData from "../../data/projects.json";
 
-const textBold = Manrope({ weight: "800", subsets: ["latin"] });
+const textBold = Poppins({ weight: "600", subsets: ["latin"] });
 const textRegular = Manrope({ weight: "400", subsets: ["latin"] });
 const textLight = Manrope({ weight: "200", subsets: ["latin"] });
 
@@ -47,13 +47,13 @@ const ProjectDetail: NextPage = (props) => {
   return (
     <div className="flex justify-center  pl-12 md:pl-0">
       <main className="w-[90vw] md:w-[80vw] relative border">
-          <Link
-            href={`/`}
-            className="my-4 rounded-full  backdrop-blur	bg-white/30 fixed mx-8  p-2 z-10"
-          >
-            <ArrowLeft className="text-2xl" weight="thin" />
-          </Link>
-        <header className=" w-full flex flex-col border-b px-8 pb-4  sticky top-0 ">
+        <Link
+          href={`/`}
+          className="my-4 rounded-full  backdrop-blur	bg-white/30 fixed mx-8  p-2 z-10"
+        >
+          <ArrowLeft className="text-2xl" weight="thin" />
+        </Link>
+        <header className=" w-full flex flex-col border-b px-8 pb-4  sticky- top-0 ">
           <div className="flex flex-col md:flex-row justify-between mt-16">
             <h1 className={`${textBold.className} text-4xl`}>
               {projectData.title}
@@ -64,14 +64,15 @@ const ProjectDetail: NextPage = (props) => {
           </div>
         </header>
 
-        <section className="w-full h-[80vh] p-8  sticky top-0 bg-white">
+        <section className="w-full h-[80vh] p-8  sticky- top-0 bg-white">
           <BannerAnimate projectId={projectData.imagePath} />
         </section>
 
         <section
-          className={`${textBold.className} min-h-[100vh] text-zinc-500 mt-16 text-[5vw] p-8  sticky top-0 bg-white flex items-center`}
+          className={`${textBold.className} text-zinc-500 my-16 text-[4vw] p-8  sticky- top-0 flex`}
         >
-          "{projectData.description}"
+          <span>{'"'}</span>
+          <span className={textBold.className}>{projectData.description}{'"'}</span>
         </section>
 
         <span
@@ -79,13 +80,12 @@ const ProjectDetail: NextPage = (props) => {
         >
           Mais detalhes:
         </span>
-        <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t sticky top-0 bg-white">
+        <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t sticky- top-0 bg-white">
           <aside className="w-full md:w-3/5 flex flex-col gap-16">
             {projectData.images.map((el) => (
-              <div className="h-[70vh]">
+              <div key={el} className="h-[70vh]">
                 <img
                   src={`/${el}`}
-                  key={el}
                   className="fade-in h-full w-full object-cover border-0"
                 />
               </div>
