@@ -10,7 +10,7 @@
       "codtime/welcome-1.png",
       "codtime-splash-img.png"
     ],
-    "description": "A primeira versão do CodTime surgiu por uma necessidade pessoal, precisava de uma sistam facil e simples que registrase as horas que eu trabalhei nos projetos freelancer que estava desenvolvendo, porem  todos do mercada ou eram muito complexos ou voltados para empresas, então decidi fazer o meu proprio sistema de registro de horas.  Logo depois ele se torou meu PG (Projeto de Gradução na UFFES), onde a ideia crescel e se tornou um  sistema de gêrencia de horas de trabalho integrado ao GitLab, com enfaze em produtividade de equipes de desenvolvedores utilizando o SCRUM como base",
+    "description": "A primeira versão do CodTime surgiu de uma necessidade pessoal. Eu precisava de um sistema fácil e simples que registrasse as horas que eu trabalhava nos projetos como freelancer. No entanto, todas as opções do mercado eram complexas e com foco empresarial. Assim, decidi criar meu próprio sistema de registro de horas. Logo depois, ele se tornou meu Projeto de Graduação (PG) na UFES. A ideia cresceu e evoluiu para um sistema de gerenciamento de horas de trabalho integrado ao GitLab. Com foco na produtividade de equipes de desenvolvedores, o sistema utiliza o SCRUM como base.",
     "activities": [
       "UI/UX",
       "Desenvolvimento sistema web",
@@ -29,7 +29,7 @@
       "linhagua/schedule-1.png",
       "linhagua-splash-img.png"
     ],
-    "description": "O ponta de lansa! esse sistema foi meu primeiro projeto para terceiro, desenvolvi um ERP (Sistema de Gestão Empresarial) que foi construido para agiliza todo o processo de produção de uma empresa de envase de água mineral, dezde o agendamento ao pagamento dos clientes, abarcabdo todos os processos da empresa.",
+    "description": "O ponta de lança! Esse sistema foi o meu primeiro projeto para terceiros. Desenvolvi um ERP (Enterprise Resource Planning) que foi construído para agilizar todo o processo de produção de uma empresa de envase de água mineral, desde o agendamento até o pagamento dos clientes, abarcando todos os processos da empresa.",
     "activities": ["UI/UX", "Back-end", "Front-end"],
     "tools": ["Vue", "AdonisJS", "PostgreSQL", "Docker", "Heroku", "Vercel"]
   },
@@ -45,7 +45,7 @@
       "DA/map-light-1.png",
       "DA/map-light-2.png"
     ],
-    "description": "Lidero um dos principais projetos da Motora.ai onde faço parte da equipe de desenvolvimento. O poartal Driver Analytics e um sistema web que lida com todo processo de gestão da condução dos motoristas dos clientes. Onde eles tem acesso a todas informações geradas pelo equipamento IOT instalados nos veículos, que monitoram por meio de Inteligencia Artificial os motoristas.",
+    "description": "Lidero um dos principais projetos da Motora, onde faço parte da equipe de desenvolvimento. O portal Driver Analytics é um sistema web que lida com todo o processo de gestão da condução dos motoristas dos clientes. Eles têm acesso a todas as informações geradas pelos equipamentos IOT instalados nos veículos, que monitoram os motoristas por meio de Inteligência Artificial.",
     "activities": ["Back-end", "Front-end", "Ajustes de UI/UX"],
     "tools": ["Agular", "Leaflet", "Node", "MongoDB", "Figma"]
   },
@@ -55,7 +55,7 @@
     "year": "2023",
     "imagePath": "telemetry-splash-img.png",
     "images": ["telemetry-splash-img.png"],
-    "description": "Como o proprio nome sugere o Telemetry e um sistema de telemetria que auxilia no desenvolvimento do (eVTOL) que é a aeronave eletrica de decolagem e pulso vertical (ou 'carro voador' kkkk), projeto que a Motora e parceira junto a Embraer. O Telemetry e um sistema web que tem como objetivo tonar visível em tempo real a tragetoria sugeria e a efetiva do veículo, bem como outros atributos que podem impactar no voo, como obstaculos e altimetria.",
+    "description": "Como o próprio nome sugere, o Telemetry é um sistema de telemetria que auxilia no desenvolvimento do eVTOL (aeronave elétrica de decolagem e pouso vertical), também conhecido como 'carro voador' (👌🏻) , um projeto em parceria da Motora com a Embraer. O Telemetry é um sistema web com o objetivo de tornar visível, em tempo real, a trajetória sugerida e efetiva do veículo, bem como outros atributos que podem impactar no voo, como obstáculos e altimetria.",
     "activities": ["UI/UX", "Back-end", "Front-end"],
     "tools": ["Figma", "Agular", "Leaflet", "C++", "Socket++"]
   }

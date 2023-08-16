@@ -23,7 +23,7 @@ const CardProject: React.FC<Props> = ({ projectImg, title, year, id }) => {
         </span>
       </header>
       <Link href={`/project/${id}`}>
-        <div className="px-4 md:px-8 lg:px-16 mt-8 cursor-show-more">
+        <div id={id} className="px-4 md:px-8 lg:px-16 mt-8 cursor-show-more">
           <img src={projectImg} className="h-[75vh] w-full  object-cover" />
         </div>
       </Link>

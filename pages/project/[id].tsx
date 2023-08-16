@@ -48,12 +48,12 @@ const ProjectDetail: NextPage = (props) => {
     <div className="flex justify-center  pl-12 md:pl-0">
       <main className="w-[90vw] md:w-[80vw] relative border">
         <Link
-          href={`/`}
-          className="my-4 rounded-full  backdrop-blur	bg-white/30 fixed mx-8  p-2 z-10"
+          href={`/#${projectData.id}`}
+          className="my-4 rounded-full  backdrop-blur	bg-white/30 fixed  md:mx-6 p-2 z-10"
         >
           <ArrowLeft className="text-2xl" weight="thin" />
         </Link>
-        <header className=" w-full flex flex-col border-b px-8 pb-4  sticky- top-0 ">
+        <header className=" w-full flex flex-col border-b px-2 md:px-8 pb-4  sticky- top-0 ">
           <div className="flex flex-col md:flex-row justify-between mt-16">
             <h1 className={`${textBold.className} text-4xl`}>
               {projectData.title}
@@ -64,12 +64,12 @@ const ProjectDetail: NextPage = (props) => {
           </div>
         </header>
 
-        <section className="w-full h-[80vh] p-8  sticky- top-0 bg-white">
+        <section className="w-full h-[80vh] px-2 py-8 md:px-8 sticky- top-0 bg-white">
           <BannerAnimate projectId={projectData.imagePath} />
         </section>
 
         <section
-          className={`${textBold.className} text-zinc-500 my-16 text-[4vw] p-8  sticky- top-0 flex`}
+          className={`${textBold.className} text-zinc-500 my-16 text-[6vw] md:text-[4vw] p-8  sticky- top-0 flex`}
         >
           <span>{'"'}</span>
           <span className={textBold.className}>{projectData.description}{'"'}</span>
