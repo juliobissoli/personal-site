@@ -48,15 +48,5 @@
     "description": "Lidero um dos principais projetos da Motora, onde faço parte da equipe de desenvolvimento. O portal Driver Analytics é um sistema web que lida com todo o processo de gestão da condução dos motoristas dos clientes. Eles têm acesso a todas as informações geradas pelos equipamentos IOT instalados nos veículos, que monitoram os motoristas por meio de Inteligência Artificial.",
     "activities": ["Back-end", "Front-end", "Ajustes de UI/UX"],
     "tools": ["Agular", "Leaflet", "Node", "MongoDB", "Figma"]
-  },
-  {
-    "id": "telemetry",
-    "title": "Telemetry",
-    "year": "2023",
-    "imagePath": "telemetry-splash-img.png",
-    "images": ["telemetry-splash-img.png"],
-    "description": "Como o próprio nome sugere, o Telemetry é um sistema de telemetria que auxilia no desenvolvimento do eVTOL (aeronave elétrica de decolagem e pouso vertical), também conhecido como 'carro voador' (👌🏻) , um projeto em parceria da Motora com a Embraer. O Telemetry é um sistema web com o objetivo de tornar visível, em tempo real, a trajetória sugerida e efetiva do veículo, bem como outros atributos que podem impactar no voo, como obstáculos e altimetria.",
-    "activities": ["UI/UX", "Back-end", "Front-end"],
-    "tools": ["Figma", "Agular", "Leaflet", "C++", "Socket++"]
   }
 ]

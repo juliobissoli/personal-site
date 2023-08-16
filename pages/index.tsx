@@ -32,7 +32,7 @@ export default function Home() {
   };
 
   return (
-    <div className="overflow-y-hidden cursor-squad">
+    <div className="overflow-y-hidden ">
       <Head>
         <title>Julio Bissoli</title>
       </Head>

@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main  className='h-[100vh] overflow-y-auto  scroll-inherit-display'>
+    <main  className='h-[100vh] overflow-y-auto  scroll-inherit-display cursor-squad'>
       <MainMenu />
       
       <Component {...pageProps} />
