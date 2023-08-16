@@ -48,5 +48,22 @@
     "description": "Lidero um dos principais projetos da Motora, onde faço parte da equipe de desenvolvimento. O portal Driver Analytics é um sistema web que lida com todo o processo de gestão da condução dos motoristas dos clientes. Eles têm acesso a todas as informações geradas pelos equipamentos IOT instalados nos veículos, que monitoram os motoristas por meio de Inteligência Artificial.",
     "activities": ["Back-end", "Front-end", "Ajustes de UI/UX"],
     "tools": ["Agular", "Leaflet", "Node", "MongoDB", "Figma"]
+  },
+  {
+    "id": "sca-amaes",
+    "title": "SCA Amaes",
+    "year": "2022",
+    "imagePath": "sca-amaes-splash.png",
+    "images": [
+      "sca-amaes/amaes-assisted-filter.png",
+      "sca-amaes/amaes-assisted-form.png",
+      "sca-amaes/amaes-assisted-list.png",
+      "sca-amaes/amaes-logo.png",
+      "sca-amaes/amaes-ptojrtc-list.png"
+
+    ],
+    "description": "Enquanto colaborava com o laboratório LabES na UFES, participei da criação do SCA AMAES, um sistema de valor inestimável. Ele visa aprimorar a gestão da AMAES, uma associação sem fins lucrativos que trabalha com pessoas autistas no Espírito Santo. Nesse contexto desafiador, o sistema desempenha um papel crucial ao otimizar a administração, permitindo que a associação concentre seus recursos no apoio direto às pessoas autistas e suas famílias.",
+    "activities": ["UI/UX", "Front-end"],
+    "tools": ["NextJs", "Figma", "Tailwind"]
   }
 ]
