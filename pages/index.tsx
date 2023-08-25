@@ -41,7 +41,15 @@ export default function Home() {
         ref={carouselRef}
       >
         <div>
-          <WelcomeHome />
+          <WelcomeHome
+          clickShowMore={() => {
+            console.log('Welcome', projectsBanner[0].id)
+            const element = document.getElementById(projectsBanner[0].id)
+            if(element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          />
         </div>
         {projectsBanner.map((el, i) => (
           <div

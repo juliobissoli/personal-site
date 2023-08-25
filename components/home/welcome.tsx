@@ -1,11 +1,15 @@
-import { ArrowArcRight, ArrowRight } from "@phosphor-icons/react";
+import { ArrowArcRight, ArrowDown, ArrowRight } from "@phosphor-icons/react";
 import { Inter, Manrope } from "next/font/google";
 import { CompaniesLogos } from "./companiesLogos";
 
 const textStrong = Manrope({ weight: "800", subsets: ["latin"] });
 const textThin = Manrope({ weight: "300", subsets: ["latin"] });
 
-export const WelcomeHome = () => {
+interface Props {
+  clickShowMore: () => void;
+}
+
+export const WelcomeHome: React.FC<Props> = ({clickShowMore}) => {
   return (
     <div className="w-[112vw] md:w-[108vw] lg:w-[105vw] h-[100vh] lg:pl-[5vw]  md:pl-[6vw] pl-[10vw]">
       <div className="flex justify-between h-full border-l">
@@ -22,7 +26,7 @@ export const WelcomeHome = () => {
           >
             Desenvolvedor {"&"}
             <span
-              className={`${textStrong.className}font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-indigo-700 lg:mt-[-6vh]`}
+              className={`${textStrong.className} text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-indigo-700 lg:mt-[-6vh]`}
             >
               UI/UX design
             </span>{" "}
@@ -34,11 +38,15 @@ export const WelcomeHome = () => {
           <footer
             className={`${textThin.className} h-[88px] md:h-[120px]  text-zinc-600 text-md uppercase w-full flex w-full justify-end text-right px-4   border-t`}
           >
-            <div className="mt-4">
-              <a className="flex items-center gap-3 ">
-                <span className=""> Principais trabalhos </span>
-                <ArrowRight className="text-md" weight="thin" />
-              </a>
+            <div className="mt-8">
+              <button
+              onClick={clickShowMore}
+              className="flex items-center gap-3 ">
+                <span className={textThin.className}> Principais trabalhos </span>
+                <div className="-rotate-90">
+                  <ArrowDown className=" text-md animate-bounce" weight="thin" />
+                </div>
+              </button>
             </div>
           </footer>
         </aside>

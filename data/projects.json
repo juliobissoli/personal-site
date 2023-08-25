@@ -55,11 +55,11 @@
     "year": "2022",
     "imagePath": "sca-amaes-splash.png",
     "images": [
-      "sca-amaes/amaes-assisted-filter.png",
-      "sca-amaes/amaes-assisted-form.png",
-      "sca-amaes/amaes-assisted-list.png",
       "sca-amaes/amaes-logo.png",
-      "sca-amaes/amaes-ptojrtc-list.png"
+      "sca-amaes/amaes-assisted-list.png",
+      "sca-amaes/amaes-assisted-form.png",
+      "sca-amaes/amaes-ptojrtc-list.png",
+      "sca-amaes/amaes-assisted-filter.png"
 
     ],
     "description": "Enquanto colaborava com o laboratório LabES na UFES, participei da criação do SCA AMAES, um sistema de valor inestimável. Ele visa aprimorar a gestão da AMAES, uma associação sem fins lucrativos que trabalha com pessoas autistas no Espírito Santo. Nesse contexto desafiador, o sistema desempenha um papel crucial ao otimizar a administração, permitindo que a associação concentre seus recursos no apoio direto às pessoas autistas e suas famílias.",
