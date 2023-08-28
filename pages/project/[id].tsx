@@ -80,8 +80,8 @@ const ProjectDetail: NextPage = (props) => {
         >
           Mais detalhes:
         </span>
-        <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t  sticky top-0  bg-white">
-          <aside className="py-4 w-full md:w-3/5 flex flex-col gap-16 sticky top-0">
+        <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t sticky md:top-0  bg-white">
+          <aside className="py-4 w-full md:w-3/5 flex flex-col gap-16 bg-white z-10">
             {projectData.images.map((el: any) => (
               <div key={el} className=" border rounded-sm">
                 <img
@@ -94,7 +94,7 @@ const ProjectDetail: NextPage = (props) => {
 
           <aside className="px-2 md:px-8 w-full md:w-2/5 flex flex-col sticky top-0">
 
-            <div className="sticky top-0 py-4">
+            <div className="md:sticky top-0 py-4">
 
             <div className="flex flex-col mb-8">
               <small
