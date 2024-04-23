@@ -30,7 +30,7 @@ const BannerAside: React.FC<Props> = ({ title, year, imagePath }) => {
           coords.y < din.bottom &&
           coords.y > din.top;
 
-          let btn = document.getElementById(`btn-float-${imagePath}`);
+        let btn = document.getElementById(`btn-float-${imagePath}`);
         if (btn) {
           if (isInset) {
             setMouseIsVisible(true);
@@ -60,8 +60,10 @@ const BannerAside: React.FC<Props> = ({ title, year, imagePath }) => {
   });
 
   return (
-    <Link href={`/project/${imagePath}`}>
-    {/* <div className="" onClick={
+    <>
+      {/*
+    // <Link href={`/projects/${imagePath}`}>
+     <div className="" onClick={
       () => console.log('veio')
     }> */}
       <button
@@ -69,7 +71,7 @@ const BannerAside: React.FC<Props> = ({ title, year, imagePath }) => {
         id={`btn-float-${imagePath}`}
       >
         <span className="bg-zinc-900 z-10 rounded-full w-full h-full absolute flex justify-center items-center text-white">
-        Ver mais
+          Ver mais
         </span>
       </button>
       <div className="relative h-[100vh] w-full " ref={ref}>
@@ -83,8 +85,9 @@ const BannerAside: React.FC<Props> = ({ title, year, imagePath }) => {
           </div>
         </div>
       </div>
-    {/* </div> */}
-    </Link>
+      {/* </div> */}
+      {/* </Link> */}
+    </>
   );
 };
 

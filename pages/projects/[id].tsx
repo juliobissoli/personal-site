@@ -1,6 +1,5 @@
 import { BannerAnimate } from "@/components/bannerAnimate";
 import FooterScream from "@/components/footerScream";
-import MainMenu from "@/components/mainMenu";
 import { ArrowLeft, Timer } from "@phosphor-icons/react";
 import { NextPage } from "next";
 import { Manrope, Poppins } from "next/font/google";
