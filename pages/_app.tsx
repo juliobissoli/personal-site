@@ -14,7 +14,7 @@ const manropeFont = Manrope({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main  className={`h-[100vh] overflow-y-auto  scroll-inherit-display ${manropeFont.className}`}>
+    <main  className={`h-[100vh] overflow-y-auto  scroll-inherit-display dark:bg-zinc-950 dark:text-white ${manropeFont.className}`}>
       <MainMenu />
       <div className='mt-20 md:mt-0'>
         <Component {...pageProps} />

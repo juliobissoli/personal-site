@@ -12,14 +12,14 @@ interface Props {
 export const WelcomeHome: React.FC<Props> = ({ clickShowMore }) => {
   return (
     <div className="w-[100vw] md:w-[105vw] h-[100vh] lg:pl-[5vw]   pl-0 md:pl-[6vw]">
-      <div className="flex justify-between h-full border-l">
+      <div className="flex justify-between h-full border-0  md: border-1 border-l-primary">
 
         <aside className=" h-full w-full ">
           {/* <header className="pt-8 md:pt-16 "> */}
           <div className="w-full h max-w-[1624px] h-full mx-auto p-4 flex-1 relative">
 
             <div className="max-w-[1140px] mt-[15vh] md:mt-[25vh]">
-              <h1 className={`fade-in text-4xl gap-2 text-zinc-600 w-full flex flex-wrap tracking-tight  sm:text-7xl `}>
+              <h1 className={`fade-in text-4xl gap-2 text-secondary w-full flex flex-wrap tracking-tight  sm:text-7xl `}>
                 <span className={`${textStrong.className}`}>Olá,</span> <span className={textStrong.className}>sou o</span> <span className={textStrong.className}>Julio,</span><span className={textStrong.className}>desenvolvedor</span>
                 <span className={textStrong.className}>de software e</span>
                 <span className={`bg-gradient-to-br bg-clip-text from-orange-500 to-violet-600 text-transparent h-6xl ${textStrong.className}`}>
@@ -27,7 +27,7 @@ export const WelcomeHome: React.FC<Props> = ({ clickShowMore }) => {
                 </span>
 
               </h1>
-              <ul className="flex gap-3 mt-3 text-zinc-700 text-zinc-700 mx-1">
+              <ul className="flex gap-3 mt-3 text-secondary text-secondary mx-1">
                 <li>
                   <button className=" whitespace-nowrap text-xs md:text-sm tracking-wider uppercase">
                     <a
@@ -61,7 +61,7 @@ export const WelcomeHome: React.FC<Props> = ({ clickShowMore }) => {
             >
               <button
                 onClick={clickShowMore}
-                className={`flex items-center gap-3 border rounded-full px-4 py-2 ${textThin.className}  text-zinc-200 bg-zinc-900 hover:bg-zinc-50 hover:text-zinc-900 text-md uppercase`}>
+                className={`flex items-center gap-3 btn-primary`}>
                 <span className={textThin.className}> Principais trabalhos </span>
                 <div className="rotate-0 md:-rotate-90">
                   <ArrowDown className=" text-md animate-bounce" />
@@ -71,7 +71,7 @@ export const WelcomeHome: React.FC<Props> = ({ clickShowMore }) => {
           </div>
 
         </aside>
-        <aside className="border-l h-full lg:w-[5vw]  md:w-[8vw] w-[12vw] hidden md:flex">
+        <aside className="border-l-primary h-full lg:w-[5vw]  md:w-[8vw] w-[12vw] hidden md:flex">
           <div className="h-full">
             <CompaniesLogos />
           </div>

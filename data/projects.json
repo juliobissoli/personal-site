@@ -1,7 +1,45 @@
 [
   {
+    "id": "da-backoffice",
+    "highlights": true,
+    "title": "DA-Backoffice",
+    "subtitle": "Sistema web interno da Motora para gerenciar o DriverAnalytics. Oferece painéis de gestão para dispositivos, finanças e usuários, com métricas e histórico de operações. Ideal para otimizar processos e decisões estratégicas.",
+    "year": "2022",
+    "imagePath": "da-backoffice/banner-backoffice.png",
+    "images": [
+      "da-backoffice/image-0.png",
+      "da-backoffice/image-1.png",
+      "da-backoffice/image-2.png",
+      "da-backoffice/image-3.png",
+      "da-backoffice/image-4.png",
+      "da-backoffice/image-5.png",
+      "da-backoffice/image-6.png",
+      "da-backoffice/image-7.png",
+      "da-backoffice/image-8.png",
+      "da-backoffice/image-9.png",
+      "da-backoffice/image-10.png"
+    ],
+    "description": "O DA-backoffi, desenvolvido internamente pela Motora, é um sistema web completo para gerenciar operações relacionadas ao DriverAnalytics. Com recursos como gestão de dispositivos, análises financeiras, gestão de usuários, métricas detalhadas e histórico de alterações, é essencial para impulsionar a eficiência e a tomada de decisões estratégicas na empresa.",
+    "activities": [
+      "UI/UX",
+      "Engenheiria de Requisitos",
+      "Desenvolverdo front-end",
+      "Desenvolverdo back-end"
+    ],
+    "tools": [
+      "Vue",
+      "Tailwind",
+      "Vuex",
+      "Figma",
+      "Node",
+      "Insomnia"
+    ]
+  },
+  {
     "id": "codtime",
+    "highlights": true,
     "title": "CodTime",
+    "subtitle": "O CodTime nasceu da necessidade pessoal de um freelancer por um sistema simples de registro de horas. Evoluindo para o meu projeto de graduação na UFES, tornou-se uma ferramenta integrada ao GitLab, focada na produtividade de equipes de desenvolvedores. Baseado em SCRUM, oferece uma abordagem eficiente para gerenciamento de tempo e projetos.",
     "year": "2022",
     "imagePath": "codtime-splash-img.png",
     "images": [
@@ -16,11 +54,21 @@
       "Desenvolvimento sistema web",
       "Integração com GitLab"
     ],
-    "tools": ["Figma", "Node", "Vue", "Vercel", "Insomnia"]
+    "tools": [
+      "Vue",
+      "Vuex",
+      "Figma",
+      "Boodstrap",
+      "Node",
+      "Vercel",
+      "Insomnia"
+    ]
   },
   {
     "id": "erp-linhagua",
+    "highlights": true,
     "title": "ERP-Linhagua",
+    "subtitle": "O Ponta de Lança marcou meu primeiro projeto para terceiros. Desenvolvi um ERP para otimizar o processo de produção de uma empresa de envase de água mineral, cobrindo desde agendamentos até pagamentos, abrangendo todos os aspectos operacionais da empresa.",
     "year": "2020",
     "imagePath": "linhagua-splash-img.png",
     "images": [
@@ -30,12 +78,27 @@
       "linhagua-splash-img.png"
     ],
     "description": "O ponta de lança! Esse sistema foi o meu primeiro projeto para terceiros. Desenvolvi um ERP (Enterprise Resource Planning) que foi construído para agilizar todo o processo de produção de uma empresa de envase de água mineral, desde o agendamento até o pagamento dos clientes, abarcando todos os processos da empresa.",
-    "activities": ["UI/UX", "Back-end", "Front-end"],
-    "tools": ["Vue", "AdonisJS", "PostgreSQL", "Docker", "Heroku", "Vercel"]
+    "activities": [
+      "UI/UX",
+      "Back-end",
+      "Front-end"
+    ],
+    "tools": [
+      "Vue",
+      "Vuex",
+      "Boodstrap",
+      "AdonisJS",
+      "PostgreSQL",
+      "Docker",
+      "Heroku",
+      "Vercel"
+    ]
   },
   {
     "id": "driveranalytics",
+    "highlights": true,
     "title": "Driver Analytics",
+    "subtitle": "Este sistema web abrange todo o ciclo de gestão da condução dos motoristas dos clientes do Motota. Com acesso às informações dos dispositivos IoT instalados nos veículos, monitora os motoristas por meio de Inteligência Artificial, proporcionando uma gestão eficiente e insights valiosos para a empresa.",
     "year": "2023",
     "imagePath": "da-banner-image.png",
     "images": [
@@ -45,13 +108,27 @@
       "DA/map-light-1.png",
       "DA/map-light-2.png"
     ],
-    "description": "Lidero um dos principais projetos da Motora, onde faço parte da equipe de desenvolvimento. O portal Driver Analytics é um sistema web que lida com todo o processo de gestão da condução dos motoristas dos clientes. Eles têm acesso a todas as informações geradas pelos equipamentos IOT instalados nos veículos, que monitoram os motoristas por meio de Inteligência Artificial.",
-    "activities": ["Back-end", "Front-end", "Ajustes de UI/UX"],
-    "tools": ["Agular", "Leaflet", "Node", "MongoDB", "Figma"]
+    "description": "Liderei um dos principais projetos da Motora, onde fiz parte da equipe de desenvolvimento. O portal Driver Analytics é um sistema web que lida com todo o processo de gestão da condução dos motoristas dos clientes. Eles têm acesso a todas as informações geradas pelos equipamentos IOT instalados nos veículos, que monitoram os motoristas por meio de Inteligência Artificial.",
+    "activities": [
+      "Back-end",
+      "Front-end",
+      "Ajustes de UI/UX"
+    ],
+    "tools": [
+      "Agular",
+      "Leaflet",
+      "RxJs",
+      "Figma",
+      "Boodstrap",
+      "Node",
+      "MongoDB"
+    ]
   },
   {
     "id": "sca-amaes",
+    "highlights": false,
     "title": "SCA Amaes",
+    "subtitle": "Durante minha colaboração com o laboratório LabES na UFES, participei do desenvolvimento do SCA AMAES. Esse sistema valioso visa aprimorar a gestão da AMAES, uma associação sem fins lucrativos que apoia pessoas autistas no Espírito Santo. O SCA AMAES permite uma administração eficiente, direcionando recursos para o apoio direto às pessoas autistas e suas famílias.",
     "year": "2022",
     "imagePath": "sca-amaes-splash.png",
     "images": [
@@ -60,10 +137,16 @@
       "sca-amaes/amaes-assisted-form.png",
       "sca-amaes/amaes-ptojrtc-list.png",
       "sca-amaes/amaes-assisted-filter.png"
-
     ],
     "description": "Enquanto colaborava com o laboratório LabES na UFES, participei da criação do SCA AMAES, um sistema de valor inestimável. Ele visa aprimorar a gestão da AMAES, uma associação sem fins lucrativos que trabalha com pessoas autistas no Espírito Santo. Nesse contexto desafiador, o sistema desempenha um papel crucial ao otimizar a administração, permitindo que a associação concentre seus recursos no apoio direto às pessoas autistas e suas famílias.",
-    "activities": ["UI/UX", "Front-end"],
-    "tools": ["NextJs", "Figma", "Tailwind"]
+    "activities": [
+      "UI/UX",
+      "Front-end"
+    ],
+    "tools": [
+      "NextJs",
+      "Figma",
+      "Tailwind"
+    ]
   }
 ]

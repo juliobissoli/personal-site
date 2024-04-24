@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import { format, differenceInMonths } from 'date-fns';
 import { ptBR } from 'date-fns/locale'
-import { Manrope } from "next/font/google";
 
 
 
@@ -67,31 +66,32 @@ const AboutPage: NextPage = () => {
 
     // moment.locale('pt-br')
 
-    const getTotalWorkingLabel  = (init: string, end: string) =>  {
+    const getTotalWorkingLabel = (init: string, end: string) => {
         const totalMonth = differenceInMonths(new Date(end), new Date(init))
 
         if (totalMonth > 11) {
-            return `${ (totalMonth / 12).toFixed(0) } anos e ${ (totalMonth % 12).toFixed(0)} messes`
+            return `${(totalMonth / 12).toFixed(0)} anos e ${(totalMonth % 12).toFixed(0)} messes`
         }
 
-        return `${ totalMonth } messes`
+        return `${totalMonth} messes`
     }
 
     return (
-        <main className="md:mx-[5vw]  relative md:border flex-1  min-h-[100vh]">
-            <header className="mt-4 md:mt-8  border-b flex items-end">
-                <h1 className="p-4 md:p-8  md:mx-16 text-4xl md:text-5xl text-zinc-900 ">
+        <main className="md:mx-[5vw]  relative  border-primary border-0 md:border-1 flex-1  min-h-[100vh]">
+            <header className="mt-4 md:mt-8  border-b-primary flex items-end">
+                <h1 className="p-4 md:p-8  md:mx-16 text-4xl md:text-5xl ">
                     Saiba mais sobre min
                 </h1>
             </header>
 
-            <section className="p-4 md:mx-16 max-w-[635px] text-zinc-700 tracking-wide">
-                <div className="mt-8 text-2xl space-y-4 text-justify ">
+            <section className="p-4 md:p-8 md:mx-16 max-w-[835px] text-secondary tracking-wide">
+                <div className="mt-8 text-2xl md:text-3xl space-y-4 text-justify font-light ">
                     <p className="">
-                        Me chamo Julio, tenho {(new Date().getFullYear()) - 1998} anos
+                        Me chamo Julio Cesar Santos Bissoli (mas pode me chamar apenas de Julio 👌🏼), tenho {(new Date().getFullYear()) - 1998} anos.
+                        Sou natural de Linhares, no interio do Espírito Santos, mas vivo em Vitória-ES desde 2016
                     </p>
                     <p>
-                        Sou um desenvolvedor de software apaixonado por criar sistemas com interfaces simples e intuitivas que
+                        Desde que me mudei entrei nesse munda da programação, e me tornei um desenvolvedor de software apaixonado por criar sistemas com interfaces simples e intuitivas que
                         proporcionam uma excelente experiência ao usuário. Com <strong> mais de 5 anos </strong> de experiência no
                         desenvolvimento de aplicações web, sou especializado em front-end habilidades sólidas em UI/UX.
                     </p>
@@ -99,13 +99,13 @@ const AboutPage: NextPage = () => {
 
                 </div>
                 <div className="text-zinc-500 mt-8">
-                    <h3 className="uppercase border-b py-1 text-xs mt-16 mb-2">Carreira</h3>
+                    <h3 className="uppercase border-b-primary py-1 text-xs mt-16 mb-2">Carreira</h3>
                     <ul className="space-y-8">
                         {
                             companiesInfo.map(
                                 (company, i) => (
                                     <li className="" key={i}>
-                                        <p className="text-xl uppercase"><strong>{company.role}</strong></p>
+                                        <p className="text-2xl uppercase tracking-wide font-light text-secondary"><strong>{company.role}</strong></p>
                                         <p>{company.name} • {company.city}</p>
                                         <p className="space-x-1">
                                             <span className="capitalize">
@@ -122,13 +122,13 @@ const AboutPage: NextPage = () => {
                 </div>
 
                 <div className="text-zinc-500 mt-8">
-                    <h3 className="uppercase border-b py-1 text-xs mt-16 mb-2">Fomação</h3>
+                    <h3 className="uppercase border-b-primary py-1 text-xs mt-16 mb-2">Fomação</h3>
                     <ul className="space-y-8">
                         {
                             academicInfo.map(
                                 (academy, i) => (
                                     <li className="" key={i}>
-                                        <p className="text-xl uppercase"><strong>{academy.curse}</strong></p>
+                                        <p className="text-2xl uppercase tracking-wide font-light text-secondary"><strong>{academy.curse}</strong></p>
                                         <p>{academy.institute} • {academy.city}</p>
                                         <p className="space-x-1">
                                             <span className="capitalize">

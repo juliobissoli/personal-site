@@ -44,109 +44,98 @@ const ProjectDetail: NextPage = (props) => {
   });
 
   return (
-    <div className="flex justify-center  pl-12 md:pl-0">
-      <main className="w-[90vw] md:w-[80vw] relative border">
-        <Link
+    <>
+      <main className="md:mx-[5vw]  relative border-x-primary flex-1  min-h-[100vh]">
+        {/* <Link
           href={`/#${projectData.id}`}
-          className="my-4 rounded-full  backdrop-blur	bg-white/30 fixed  md:mx-6 p-2 z-10"
+          className="rounded-full  backdrop-blur	bg-white/30 fixed  mx-4 p-2 z-10"
         >
           <ArrowLeft className="text-2xl" weight="thin" />
-        </Link>
-        <header className=" w-full flex flex-col border-b px-2 md:px-8 pb-4  sticky- top-0 ">
-          <div className="flex flex-col md:flex-row justify-between mt-16">
-            <h1 className={`${textBold.className} text-4xl`}>
-              {projectData.title}
-            </h1>
-            <h1 className={`${textLight.className} text-4xl`}>
-              {projectData.year}
-            </h1>
-          </div>
+        </Link> */}
+
+        <header className="mt-16 md:mt-8  border-b-primary flex items-end">
+          <h1 className="p-4 md:p-8  md:mx-16 text-4xl md:text-5xl ">
+            {projectData.title}
+
+          </h1>
         </header>
 
-        <section className="w-full h-[80vh] px-2 py-8 md:px-8 top-0 bg-white">
-          <BannerAnimate projectId={projectData.imagePath} />
+        <section className="w-full h-[70vh] mt-16 md:px-16 p-4 md:px-16   ">
+          <div className="px-0 md:px-8 h-full">
+            <BannerAnimate projectId={projectData.imagePath} />
+          </div>
         </section>
 
-        <section
-          className={`${textBold.className} text-zinc-500 my-16 text-[6vw] md:text-[4vw] p-8   flex`}
-        >
-          <span>{'"'}</span>
-          <span className={textBold.className}>{projectData.description}{'"'}</span>
-        </section>
 
-        <span
-          className={`px-4 md:px-8 ${textRegular.className} uppercase text-zinc-500 `}
-        >
-          Mais detalhes:
-        </span>
-        <section className="flex flex-col-reverse md:flex-row p-4 md:p-8 mt-2 pt-16  border-t sticky md:top-0  bg-white">
-          <aside className="py-4 w-full md:w-3/5 flex flex-col gap-16 bg-white z-10">
-            {projectData.images.map((el: any) => (
-              <div key={el} className=" border rounded-sm">
-                <img
-                  src={`/${el}`}
-                  className="fade-in h-full w-full object-cover border-0  rounded-sm"
-                />
+
+        <div className="p-4 md:p-16 mt-2 pt-16">
+          <section className="p-0 md:p-8 flex flex-col-reverse md:flex-row sticky md:top-0">
+            <aside className="py-4 w-full md:w-3/5 flex flex-col gap-16  z-10 bg-white dark:bg-zinc-950">
+              <div className="uppercase text-zinc-500 text-sm border-b-primary">
+                Mais detalhes
               </div>
-            ))}
-          </aside>
+              <div className="text-justify">
+                <span className="text-xl md:text-3xl text-secondary tracking-wide font-light">{projectData.description}</span>
+              </div>
 
-          <aside className="px-2 md:px-8 w-full md:w-2/5 flex flex-col sticky top-0">
+              <div className="py-16 space-y-8">
+                {projectData.images.map((el: any) => (
+                  <div key={el} className=" border-primary rounded-xl overflow-auto">
+                    <img
+                      src={`/${el}`}
+                      className="fade-in h-full w-full object-cover border-0  "
+                    />
+                  </div>
+                ))}
+              </div>
+            </aside>
 
-            <div className="md:sticky top-0 py-4">
+            <aside className="px-2 md:px-8 w-full md:w-2/5 ml-0 md:ml-16 flex flex-col sticky top-0 ">
 
-            <div className="flex flex-col mb-8">
-              <small
-                className={`${textRegular.className} border-b border-zinc-800 text-zinc-500 text-sm`}
-              >
-                {" "}
-                Ano:
-              </small>
-              <span className={`${textRegular.className} text-2xl py-2`}>
-                {" "}
-                {projectData.year}
-              </span>
-            </div>
-            <div className="flex flex-col mb-8">
-              <small
-                className={`${textRegular.className} border-b border-zinc-800 text-zinc-500 text-sm`}
-              >
-                {" "}
-                Atividades:
-              </small>
-              {projectData.activities.map((el: any) => (
-                <span
-                  className={`${textRegular.className} text-2xl py-2`}
-                  key={el}
-                >
-                  {" "}
-                  {el}
-                </span>
-              ))}
-            </div>
-            <div className="flex flex-col mb-8">
-              <small
-                className={`${textRegular.className} border-b border-zinc-800 text-zinc-500 text-sm`}
-              >
-                {" "}
-                Ferramentas:
-              </small>
-              {projectData.tools.map((el: any) => (
-                <span
-                  className={`${textRegular.className} text-2xl py-2`}
-                  key={el}
-                >
-                  {" "}
-                  {el}
-                </span>
-              ))}
-            </div>
-            </div>
+              <div className="md:sticky top-0 py-4">
 
-          </aside>
-        </section>
+
+                <div className="flex flex-col mb-8">
+                  <small
+                    className={`border-b-primary-primary text-zinc-500 text-sm`}
+                  >
+                    Atividades:
+                  </small>
+
+                  <ul className="flex flex-wrap gap-2 mt-2">
+                    {projectData.activities.map((el: any, i: number) => (
+                      <li key={i} className="badge">{el}</li>
+                    ))}
+                  </ul>
+
+                </div>
+                <div className=" mb-8">
+                  <p className="border-b-primary text-zinc-500 text-sm">  Ferramentas:</p>
+
+                  <ul className="flex flex-wrap gap-2 mt-2">
+                    {projectData.tools.map((el: any, i: number) => (
+                      <li key={i} className="badge">{el}</li>
+                    ))}
+                  </ul>
+
+                </div>
+
+                <div className="flex flex-col mb-8">
+                  <small
+                    className={`border-b-primary text-zinc-500 text-sm`}
+                  >
+                    Período:
+                  </small>
+                  <span className={`text-zinc-500 py-2`}>{projectData.year}</span>
+                </div>
+              </div>
+
+            </aside>
+          </section>
+        </div>
+
       </main>
-    </div>
+    </>
   );
 };
 

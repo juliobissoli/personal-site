@@ -6,6 +6,32 @@
 
 
 
+.btn-primary {
+  @apply border rounded-full px-4 py-2 font-light text-zinc-200 dark:text-zinc-700 bg-zinc-900 dark:bg-zinc-50 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-100 tracking-wide uppercase
+}
+
+
+.btn-secondary {
+  @apply border-primary rounded-full px-4 py-2 font-light tracking-wide uppercase bg-transparent dark:hover:bg-zinc-50 hover:bg-zinc-900 dark:hover:text-zinc-900 hover:text-zinc-100
+}
+
+.text-secondary {
+  @apply text-zinc-700 dark:text-zinc-300
+}
+
+.border-primary {    @apply border dark:border-zinc-800} 
+.border-y-primary {  @apply border-y dark:border-zinc-800} 
+.border-x-primary {  @apply border dark:border-zinc-800} 
+.border-t-primary {  @apply border-t dark:border-zinc-800} 
+.border-b-primary {  @apply border-b dark:border-zinc-800} 
+.border-r-primary {  @apply border-r dark:border-zinc-800} 
+.border-l-primary {  @apply border-l dark:border-zinc-800} 
+
+
+.badge {
+  @apply text-secondary text-xs py-2 px-3 rounded-full border-primary
+}
+
 .scroll-inherit {
   overflow: scroll !important
 }

@@ -5,7 +5,7 @@ import ProjectsData from "../data/projects.json";
 import Head from "next/head";
 
 export default function Home() {
-  const projectsBanner = ProjectsData;
+  const projectsBanner = ProjectsData.filter(el => el.highlights);;
 
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -16,7 +16,7 @@ export default function Home() {
       carousel.addEventListener("wheel", handleScroll);
     }
   }, []);
-  
+
   const handleScroll = (event: any) => {
     const width = window.innerWidth;
     if (carouselRef && carouselRef.current && width >= 768) {
@@ -42,26 +42,23 @@ export default function Home() {
       >
         <div>
           <WelcomeHome
-          clickShowMore={() => {
-            console.log('Welcome', projectsBanner[0].id)
-            const element = document.getElementById(projectsBanner[0].id)
-            if(element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
+            clickShowMore={() => {
+              console.log('Welcome', projectsBanner[0].id)
+              const element = document.getElementById(projectsBanner[0].id)
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           />
         </div>
         {projectsBanner.map((el, i) => (
           <div
             // href={`/project/${el.id}`}
             key={i}
-            className={`border-y border-r ${i === 0 ? "border-l" : ""}`}
+            className={`border-y-primary border-r-primary ${i === 0 ? "border-l-primary" : ""}`}
           >
             <CardProject
-              projectImg={el.imagePath}
-              title={el.title}
-              year={el.year}
-              id={el.id}
+              project={el}
             />
           </div>
         ))}
