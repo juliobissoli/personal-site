@@ -5,10 +5,6 @@
 @import './icons/icons.css';
 
 
-* {
-  font-family: 'Manrope', sans-serif;
-}
-
 
 .scroll-inherit {
   overflow: scroll !important
@@ -75,6 +71,7 @@
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -88,8 +85,13 @@
 
 
 @keyframes scroll {
-	0% { transform: translateY(0); }
-	100% { transform: translateY(calc(-250px * 6))}
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(calc(-250px * 6))
+  }
 }
 
 .slide-track {
@@ -101,9 +103,34 @@
 
 
 .cursor-squad {
-  cursor: url('../public/cursor_squad.svg'), auto; /* Define a imagem SVG como cursor do mouse */
+  cursor: url('../public/cursor_squad.svg'), auto;
+  /* Define a imagem SVG como cursor do mouse */
 }
 
 .cursor-show-more {
-  cursor: url('../public/cursor_show_more.svg'), auto; /* Define a imagem SVG como cursor do mouse */
+  cursor: url('../public/cursor_show_more.svg'), auto;
+  /* Define a imagem SVG como cursor do mouse */
+}
+
+
+.rotate-content>.rotate-content-item {
+  @apply -rotate-90 bg-blue-500
+}
+
+
+.rotate-content {
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+
+.rotate-content-item {
+  transform: rotate(-90deg); /* Aplica a rotação de 0 graus no hover */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+
+}
+
+.rotate-content:hover .rotate-content-item {
+  transform: rotate(0deg); /* Aplica a rotação de 0 graus no hover */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+
 }

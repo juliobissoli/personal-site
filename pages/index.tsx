@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import CardProject from "@/components/home/cardProject";
 import { WelcomeHome } from "@/components/home/welcome";
-import Link from "next/link";
 import ProjectsData from "../data/projects.json";
 import Head from "next/head";
 
@@ -17,9 +16,10 @@ export default function Home() {
       carousel.addEventListener("wheel", handleScroll);
     }
   }, []);
-
+  
   const handleScroll = (event: any) => {
-    if (carouselRef && carouselRef.current) {
+    const width = window.innerWidth;
+    if (carouselRef && carouselRef.current && width >= 768) {
       carouselRef.current.scrollLeft += event?.deltaY || 0;
       // carousel.style.scrollBehavior = 'smooth';
       if (carouselRef.current.scrollLeft > 0) {
@@ -37,7 +37,7 @@ export default function Home() {
         <title>Julio Bissoli</title>
       </Head>
       <div
-        className={` scroll-inherit-display  flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto`}
+        className={` scroll-inherit-display bloc md:flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto`}
         ref={carouselRef}
       >
         <div>

@@ -85,7 +85,7 @@ const AboutPage: NextPage = () => {
                 </h1>
             </header>
 
-            <section className="p-8 md:mx-16 max-w-[635px] text-zinc-700 tracking-wide">
+            <section className="p-4 md:mx-16 max-w-[635px] text-zinc-700 tracking-wide">
                 <div className="mt-8 text-2xl space-y-4 text-justify ">
                     <p className="">
                         Me chamo Julio, tenho {(new Date().getFullYear()) - 1998} anos
