@@ -64,6 +64,13 @@ const AboutPage: NextPage = () => {
         }
     ]
 
+
+    const description = `
+    E aí! Beleza? Eu sou o Julio Cesar Santos Bissoli, mas pode me chamar só de Julio, tranquilo? Tenho 26 anos e sou de Linhares, no interior do Espírito Santo, mas tô em Vitória-ES desde 2016.\n
+    Desde que cheguei por aqui, entrei de cabeça no mundo da programação. E foi amor à primeira linha de código! 😄 Me transformei num desenvolvedor de software que apaixonado em criar sistemas que são simples e fáceis de usar. Aprendi muito nesses mais de 5 anos de estrada no mundo de desenvolvimento de aplicações web, e quero evoluir cada vez mais.\n
+    Tô sempre disposto a encarar novos desafios e projetos! Se precisar de um parceiro pra somar no seu time ou projeto, estoua disposição! Tô aqui pra ajudar a transformar suas ideias em realidade, do jeito que você precisa.\n
+    Vamos trocar uma ideia e ver como podemos fazer acontecer?`
+
     // moment.locale('pt-br')
 
     const getTotalWorkingLabel = (init: string, end: string) => {
@@ -84,65 +91,71 @@ const AboutPage: NextPage = () => {
                 </h1>
             </header>
 
-            <section className="p-4 md:p-8 md:mx-16 max-w-[835px] text-secondary tracking-wide">
-                <div className="mt-8 text-2xl md:text-3xl space-y-4 text-justify font-light ">
-                    <p className="">
-                        Me chamo Julio Cesar Santos Bissoli (mas pode me chamar apenas de Julio 👌🏼), tenho {(new Date().getFullYear()) - 1998} anos.
-                        Sou natural de Linhares, no interio do Espírito Santos, mas vivo em Vitória-ES desde 2016
-                    </p>
-                    <p>
-                        Desde que me mudei entrei nesse munda da programação, e me tornei um desenvolvedor de software apaixonado por criar sistemas com interfaces simples e intuitivas que
-                        proporcionam uma excelente experiência ao usuário. Com <strong> mais de 5 anos </strong> de experiência no
-                        desenvolvimento de aplicações web, sou especializado em front-end habilidades sólidas em UI/UX.
-                    </p>
 
+            <div className="flex flex-col-reverse md:flex-row">
 
-                </div>
-                <div className="text-zinc-500 mt-8">
-                    <h3 className="uppercase border-b-primary py-1 text-xs mt-16 mb-2">Carreira</h3>
-                    <ul className="space-y-8">
+                <aside className="p-4 md:p-8 md:mx-16 w-full lg:w-3/5 max-w-[835px] text-secondary tracking-wide">
+                    <div className="mt-8 text-2xl md:text-3xl space-y-4 text-justify font-light ">
                         {
-                            companiesInfo.map(
-                                (company, i) => (
-                                    <li className="" key={i}>
-                                        <p className="text-2xl uppercase tracking-wide font-light text-secondary"><strong>{company.role}</strong></p>
-                                        <p>{company.name} • {company.city}</p>
-                                        <p className="space-x-1">
-                                            <span className="capitalize">
-                                                {format(new Date(company.init), 'LLL yyyy', { locale: ptBR })} - {format(new Date(company.end), 'LLL yyyy', { locale: ptBR })}
-                                            </span>
-                                            <span>• {getTotalWorkingLabel(company.init, company.end)} </span>
-
-                                        </p>
-                                    </li>
-                                )
-                            )
+                            description.split('\n').map((el, i) => (
+                                <div key={i}>
+                                    <p>{el}</p>
+                                </div>
+                            ))
                         }
-                    </ul>
-                </div>
+                    </div>
+                    <div className="text-zinc-500 mt-8">
+                        <h3 className="uppercase border-b-primary py-1 text-xs mt-16 mb-2">Carreira</h3>
+                        <ul className="space-y-8">
+                            {
+                                companiesInfo.map(
+                                    (company, i) => (
+                                        <li className="" key={i}>
+                                            <p className="text-2xl uppercase tracking-wide font-light text-secondary"><strong>{company.role}</strong></p>
+                                            <p>{company.name} • {company.city}</p>
+                                            <p className="space-x-1">
+                                                <span className="capitalize">
+                                                    {format(new Date(company.init), 'LLL yyyy', { locale: ptBR })} - {format(new Date(company.end), 'LLL yyyy', { locale: ptBR })}
+                                                </span>
+                                                <span>• {getTotalWorkingLabel(company.init, company.end)} </span>
 
-                <div className="text-zinc-500 mt-8">
-                    <h3 className="uppercase border-b-primary py-1 text-xs mt-16 mb-2">Fomação</h3>
-                    <ul className="space-y-8">
-                        {
-                            academicInfo.map(
-                                (academy, i) => (
-                                    <li className="" key={i}>
-                                        <p className="text-2xl uppercase tracking-wide font-light text-secondary"><strong>{academy.curse}</strong></p>
-                                        <p>{academy.institute} • {academy.city}</p>
-                                        <p className="space-x-1">
-                                            <span className="capitalize">
-                                                {format(new Date(academy.init), 'LLL yyyy', { locale: ptBR })} - {format(new Date(academy.end), 'LLL yyyy', { locale: ptBR })}
-                                            </span>
-
-                                        </p>
-                                    </li>
+                                            </p>
+                                        </li>
+                                    )
                                 )
-                            )
-                        }
-                    </ul>
-                </div>
-            </section>
+                            }
+                        </ul>
+                    </div>
+
+                    <div className="text-zinc-500 mt-8">
+                        <h3 className="uppercase border-b-primary py-1 text-xs mt-16 mb-2">Formação</h3>
+                        <ul className="space-y-8">
+                            {
+                                academicInfo.map(
+                                    (academy, i) => (
+                                        <li className="" key={i}>
+                                            <p className="text-2xl uppercase tracking-wide font-light text-secondary"><strong>{academy.curse}</strong></p>
+                                            <p>{academy.institute} • {academy.city}</p>
+                                            <p className="space-x-1">
+                                                <span className="capitalize">
+                                                    {format(new Date(academy.init), 'LLL yyyy', { locale: ptBR })} - {format(new Date(academy.end), 'LLL yyyy', { locale: ptBR })}
+                                                </span>
+
+                                            </p>
+                                        </li>
+                                    )
+                                )
+                            }
+                        </ul>
+                    </div>
+                </aside>
+
+                <aside className="p-2 md:p-16 w-full lg:w-2/5">
+                    <div className="w-full max-w-[400px] rounded-2xl border-primary overflow-auto">
+                            <img src="/avatar.jpg" />
+                    </div>
+                </aside>
+            </div>
         </main >
 
     )

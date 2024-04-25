@@ -4,6 +4,10 @@
     "highlights": true,
     "title": "DA-Backoffice",
     "subtitle": "Sistema web interno da Motora para gerenciar o DriverAnalytics. Oferece painéis de gestão para dispositivos, finanças e usuários, com métricas e histórico de operações. Ideal para otimizar processos e decisões estratégicas.",
+    "init":"2023-06-06",
+    "end": "2024-04-01",
+    "urlView": "https://backoffice.dev.driveranalytics.com.br/",
+    "urlRepository": "",
     "year": "2022",
     "imagePath": "da-backoffice/banner-backoffice.png",
     "images": [
@@ -40,6 +44,10 @@
     "highlights": true,
     "title": "CodTime",
     "subtitle": "O CodTime nasceu da necessidade pessoal de um freelancer por um sistema simples de registro de horas. Evoluindo para o meu projeto de graduação na UFES, tornou-se uma ferramenta integrada ao GitLab, focada na produtividade de equipes de desenvolvedores. Baseado em SCRUM, oferece uma abordagem eficiente para gerenciamento de tempo e projetos.",
+    "init": "2020-06-16",
+    "end": "2023-03-17",
+    "urlView": "https://codtime-web.vercel.app/",
+    "urlRepository": "https://github.com/juliobissoli/CodTime_web",
     "year": "2022",
     "imagePath": "codtime-splash-img.png",
     "images": [
@@ -69,6 +77,10 @@
     "highlights": true,
     "title": "ERP-Linhagua",
     "subtitle": "O Ponta de Lança marcou meu primeiro projeto para terceiros. Desenvolvi um ERP para otimizar o processo de produção de uma empresa de envase de água mineral, cobrindo desde agendamentos até pagamentos, abrangendo todos os aspectos operacionais da empresa.",
+    "init": "2022-01-01",
+    "end": "2022-03-01",
+    "urlView": "",
+    "urlRepository": "",
     "year": "2020",
     "imagePath": "linhagua-splash-img.png",
     "images": [
@@ -99,6 +111,10 @@
     "highlights": true,
     "title": "Driver Analytics",
     "subtitle": "Este sistema web abrange todo o ciclo de gestão da condução dos motoristas dos clientes do Motota. Com acesso às informações dos dispositivos IoT instalados nos veículos, monitora os motoristas por meio de Inteligência Artificial, proporcionando uma gestão eficiente e insights valiosos para a empresa.",
+    "init": "2021-09-01",
+    "end": "2024-03-01",
+    "urlView": "https://driveranalytics.com.br/",
+    "urlRepository": "",
     "year": "2023",
     "imagePath": "da-banner-image.png",
     "images": [
@@ -110,9 +126,9 @@
     ],
     "description": "Liderei um dos principais projetos da Motora, onde fiz parte da equipe de desenvolvimento. O portal Driver Analytics é um sistema web que lida com todo o processo de gestão da condução dos motoristas dos clientes. Eles têm acesso a todas as informações geradas pelos equipamentos IOT instalados nos veículos, que monitoram os motoristas por meio de Inteligência Artificial.",
     "activities": [
-      "Back-end",
-      "Front-end",
-      "Ajustes de UI/UX"
+      "Desenvolvimento front-end",
+      "Reestruturação de UI/UX",
+      "Desenvolvimento back-end"
     ],
     "tools": [
       "Agular",
@@ -129,6 +145,10 @@
     "highlights": false,
     "title": "SCA Amaes",
     "subtitle": "Durante minha colaboração com o laboratório LabES na UFES, participei do desenvolvimento do SCA AMAES. Esse sistema valioso visa aprimorar a gestão da AMAES, uma associação sem fins lucrativos que apoia pessoas autistas no Espírito Santo. O SCA AMAES permite uma administração eficiente, direcionando recursos para o apoio direto às pessoas autistas e suas famílias.",
+    "init": "2022-02-01",
+    "end": "2022-09-01",
+    "urlView": "",
+    "urlRepository": "",
     "year": "2022",
     "imagePath": "sca-amaes-splash.png",
     "images": [
@@ -141,12 +161,46 @@
     "description": "Enquanto colaborava com o laboratório LabES na UFES, participei da criação do SCA AMAES, um sistema de valor inestimável. Ele visa aprimorar a gestão da AMAES, uma associação sem fins lucrativos que trabalha com pessoas autistas no Espírito Santo. Nesse contexto desafiador, o sistema desempenha um papel crucial ao otimizar a administração, permitindo que a associação concentre seus recursos no apoio direto às pessoas autistas e suas famílias.",
     "activities": [
       "UI/UX",
-      "Front-end"
+      "Levantamento de requisitos",
+      "Modelagm",
+      "Desenvolver front-end"
     ],
     "tools": [
       "NextJs",
       "Figma",
+      "Drow.oi",
       "Tailwind"
+    ]
+  },
+  {
+    "id": "healthlife",
+    "highlights": false,
+    "title": "HealthLife",
+    "subtitle": "App para melhor o estilo de vida. Esse sistema foi proposto para auxiliar os usuários monitorarem diversos aspectos da saúde delas como: alimentação, atividade física, sono, inestão de água etc.",
+    "init": "2023-09-01",
+    "end": "2023-11-01",
+    "urlView": "https://www.figma.com/proto/UqfhW6DugmcnjYIahqMeoM/HealthLife?node-id=160-281&starting-point-node-id=160%3A306",
+    "urlRepository": "",
+    "year": "2022",
+    "imagePath": "healflife/banner.png",
+    "images": [
+      "healflife/imag-0.png",
+      "healflife/imag-2.png",
+      "healflife/imag-3.png",
+      "healflife/imag-4.png",
+      "healflife/imag-5.png",
+      "healflife/imag-6.png",
+      "healflife/imag-7.png",
+      "healflife/imag-8.png"
+    ],
+    "description": "App para melhor o estilo de vida. Esse sistema foi proposto para auxiliar os usuários monitorarem diversos aspectos da saúde delas como: alimentação, atividade física, sono, inestão de água etc.",    
+    "activities": [
+      "UI/UX",
+      "Levantamento de requisitos",
+      "Modelagm"
+    ],
+    "tools": [
+      "Figma"
     ]
   }
 ]

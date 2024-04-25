@@ -1,13 +1,11 @@
 import { BannerAnimate } from "@/components/bannerAnimate";
-import FooterScream from "@/components/footerScream";
-import { ArrowLeft, Timer } from "@phosphor-icons/react";
 import { NextPage } from "next";
 import { Manrope, Poppins } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import ProjectsData from "../../data/projects.json";
+import { format, differenceInMonths } from 'date-fns';
+import { ptBR } from 'date-fns/locale'
 
 const textBold = Poppins({ weight: "600", subsets: ["latin"] });
 const textRegular = Manrope({ weight: "400", subsets: ["latin"] });
@@ -61,7 +59,7 @@ const ProjectDetail: NextPage = (props) => {
         </header>
 
         <section className="w-full h-[70vh] mt-16 md:px-16 p-4 md:px-16   ">
-          <div className="px-0 md:px-8 h-full">
+          <div className="px-0 md:px-8 h-full ">
             <BannerAnimate projectId={projectData.imagePath} />
           </div>
         </section>
@@ -96,9 +94,7 @@ const ProjectDetail: NextPage = (props) => {
 
 
                 <div className="flex flex-col mb-8">
-                  <small
-                    className={`border-b-primary-primary text-zinc-500 text-sm`}
-                  >
+                  <small className="border-b-primary text-zinc-500 text-sm">
                     Atividades:
                   </small>
 
@@ -120,14 +116,18 @@ const ProjectDetail: NextPage = (props) => {
 
                 </div>
 
-                <div className="flex flex-col mb-8">
-                  <small
-                    className={`border-b-primary text-zinc-500 text-sm`}
-                  >
-                    Período:
-                  </small>
-                  <span className={`text-zinc-500 py-2`}>{projectData.year}</span>
-                </div>
+                {
+                (projectData.urlView || projectData.urlRepository) &&
+                  <div className="flex flex-col mb-8">
+                    <small className="border-b-primary text-zinc-500 text-sm">
+                      Link:
+                    </small>
+                    <div className="flex mt-2 gap-2">
+                      {projectData.urlView && <a href={projectData.urlView} target="_blank" className="btn-primary">visitar site</a>}
+                      {projectData.urlRepository && <a href={projectData.urlRepository} target="_blank" className="btn-primary">Repositório</a>}
+                    </div>
+                  </div>
+                }
               </div>
 
             </aside>

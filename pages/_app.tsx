@@ -1,10 +1,10 @@
 import MainMenu from '@/components/mainMenu'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Manrope } from 'next/font/google'
+import { Inter, Manrope } from 'next/font/google'
 
 
-const manropeFont = Manrope({
+const manropeFont = Inter({
   subsets: ['latin'],
   variable: '--font-manrope',
   weight: ['300', '400', '500'],

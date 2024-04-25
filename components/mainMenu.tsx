@@ -8,7 +8,7 @@ export default function MainMenu() {
 
   const [isExpanded, toggleExpanded] = useState(false);
 
-  const [isDarkMod, toggleTheme] = useState(false)
+  const [isDarkMode, toggleTheme] = useState(false)
 
   const router = useRouter();
 
@@ -25,13 +25,13 @@ export default function MainMenu() {
 
   const handleChangeTheme = () => {
     // const nextTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'light' : 'dark'
-    if (isDarkMod) {
+    if (isDarkMode) {
       document.documentElement.classList.remove("dark");
     } else {
       document.documentElement.classList.add("dark");
     }
 
-    toggleTheme(!isDarkMod)
+    toggleTheme(!isDarkMode)
   }
 
   return (
@@ -57,7 +57,7 @@ export default function MainMenu() {
           </ul>
 
           <button onClick={handleChangeTheme} className="text-xl text-zinc-500 h-10 w-10 p-2 hover:bg-zinc-300 rounded-full">
-            {!isDarkMod ? (<Moon size={20} weight="fill" />) : (<Sun size={20} weight="fill" />)}
+            {!isDarkMode ? (<Moon size={20} weight="fill" />) : (<Sun size={20} weight="fill" />)}
 
           </button>
         </nav>
@@ -111,7 +111,7 @@ export default function MainMenu() {
                     <button onClick={
                       () => handleChangeTheme()
                     } className="text-xl text-zinc-500 h-10 w-10 p-2 hover:bg-zinc-300 rounded-full border-primary">
-                      {!isDarkMod ? (<Moon size={20} weight="fill" />) : (<Sun size={20} weight="fill" />)}
+                      {!isDarkMode ? (<Moon size={20} weight="fill" />) : (<Sun size={20} weight="fill" />)}
 
                     </button>
                   </footer>

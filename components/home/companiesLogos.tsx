@@ -9,12 +9,12 @@ export const CompaniesLogos = () => {
   ];
 
   return (
-    <div className="h-full w-full  p-0 md:p-[0.8vw] overflow-y-hidden scroll-inherit-display ">
+    <div className="h-full w-full  p-0 md:p-[0.8vw] overflow-y-hidden scroll-inherit-display g-zinc-500 dark:invert" >
       <div className="flex flex-col gap-2 slide-track">
         {logos.map((el, i) => (
           <div
             key={i}
-            className=" flex flex-col items-center justify-center w-full h-[300px] "
+            className=" flex flex-col items-center justify-center w-full h-[300px]  "
           >
             {/* {  i > 0 ?   ( <span className="p-16 text-zinc-300">•</span>) : ''} */}
             <img src={`/${el}`} className="object-contain" />
@@ -23,7 +23,7 @@ export const CompaniesLogos = () => {
         {logos.map((el, i) => (
           <div
             key={i}
-            className=" flex flex-col items-center justify-center w-full h-[300px] "
+            className=" flex flex-col items-center justify-center w-full h-[300px]  "
           >
             {/* {  i > 0 ?   ( <span className="p-16 text-zinc-300">•</span>) : ''} */}
             <img src={`/${el}`} className="object-contain" />
