@@ -66,9 +66,9 @@ const AboutPage: NextPage = () => {
 
 
     const description = `
-    E aí! Beleza? Eu sou o Julio Cesar Santos Bissoli, mas pode me chamar só de Julio, tranquilo? Tenho 26 anos e sou de Linhares, no interior do Espírito Santo, mas tô em Vitória-ES desde 2016.\n
+    E aí! Beleza? Eu sou o Julio Cesar Santos Bissoli, mas pode me chamar só de Julio, tranquilo? Tenho 26 anos e sou de Linhares, no interior do Espírito Santo, mas estou em Vitória-ES desde 2016.\n
     Desde que cheguei por aqui, entrei de cabeça no mundo da programação. E foi amor à primeira linha de código! 😄 Me transformei num desenvolvedor de software que apaixonado em criar sistemas que são simples e fáceis de usar. Aprendi muito nesses mais de 5 anos de estrada no mundo de desenvolvimento de aplicações web, e quero evoluir cada vez mais.\n
-    Tô sempre disposto a encarar novos desafios e projetos! Se precisar de um parceiro pra somar no seu time ou projeto, estoua disposição! Tô aqui pra ajudar a transformar suas ideias em realidade, do jeito que você precisa.\n
+    Estou sempre disposto a encarar novos desafios e projetos! Se precisar de um parceiro pra somar no seu time ou projeto, estoua disposição! Estou aqui pra ajudar a transformar suas ideias em realidade, do jeito que você precisa.\n
     Vamos trocar uma ideia e ver como podemos fazer acontecer?`
 
     // moment.locale('pt-br')
@@ -77,17 +77,17 @@ const AboutPage: NextPage = () => {
         const totalMonth = differenceInMonths(new Date(end), new Date(init))
 
         if (totalMonth > 11) {
-            return `${(totalMonth / 12).toFixed(0)} anos e ${(totalMonth % 12).toFixed(0)} messes`
+            return `${(totalMonth / 12).toFixed(0)} anos e ${(totalMonth % 12).toFixed(0)} meses`
         }
 
-        return `${totalMonth} messes`
+        return `${totalMonth} meses`
     }
 
     return (
         <main className="md:mx-[5vw]  relative  border-primary border-0 md:border-1 flex-1  min-h-[100vh]">
             <header className="mt-4 md:mt-8  border-b-primary flex items-end">
                 <h1 className="p-4 md:p-8  md:mx-16 text-4xl md:text-5xl ">
-                    Saiba mais sobre min
+                    Saiba mais sobre mim
                 </h1>
             </header>
 
