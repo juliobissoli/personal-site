@@ -42,9 +42,13 @@ export default function Home() {
         <meta property="og:image" content={`https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/img-share.png`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="twitter:image" content={`https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/img-share.png`}></meta>
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:title" content="Julio Bissoli"></meta>
+        <meta name="twitter:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
       </Head>
       <div
-        className={` scroll-inherit-display bloc md:flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto`}
+        className="scroll-inherit-display bloc md:flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto"
         ref={carouselRef}
       >
         <div>

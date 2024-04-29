@@ -91,7 +91,13 @@ const AboutPage: NextPage = () => {
                 <meta property="og:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
                 <meta property="og:title" content="Julio Bissoli" key="title" />
                 <link rel="icon" href="/logo.svg" />
-                <meta property="og:image" content={`https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/avatar.jpg`} />
+                <meta property="og:image" content="https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/avatar.jpg" />
+
+                <meta property="twitter:image" content="https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/avatar.jpg" ></meta>
+                <meta name="twitter:card" content="summary_large_image"></meta>
+                <meta name="twitter:title" content="Julio Bissoli"></meta>
+                <meta name="twitter:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
+                
             </Head>
             <main className="md:mx-[5vw]  relative  border-primary border-0 md:border-1 flex-1  min-h-[100vh]">
                 <header className="mt-4 md:mt-8  border-b-primary flex items-end">

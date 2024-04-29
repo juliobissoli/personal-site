@@ -13,6 +13,17 @@ const CardProject: React.FC<Props> = ({ project }) => {
     <div className="w-[100vw] md:w-[90vw] min-h-[100vh]">
       <div className=" flex col md:flex-row justify-between items-end mb-2 border-b-primary px-4 md:px-8 lg:px-16 p-5 lg:pt-16 pb-4">
         <h3 className="text-4xl">{project.title}</h3>
+        <div className="w-1/3 fle flex-wra gap-x-2 line-clamp-1 h-12 text-zinc-500">
+          {/* <article className="inline-flex">
+
+          {project.subtitle}
+          </article> */}
+          {/* {
+            project.subtitle.split(" ").map((text: string, i: number) => (
+              <span key={i}>{text}</span>
+            ))
+          } */}
+        </div>
         {/* <div className="w-full md:w-1/3 inline-block">
         </div> */}
       </div>

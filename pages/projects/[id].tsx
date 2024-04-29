@@ -7,6 +7,10 @@ import ProjectsData from "../../data/projects.json";
 import { format, differenceInMonths } from 'date-fns';
 import { ptBR } from 'date-fns/locale'
 import Head from "next/head";
+import Link from "next/link";
+import { ArrowLeft } from "@phosphor-icons/react";
+import BackButton from "@/components/backButton";
+import { space } from "postcss/lib/list";
 
 const ProjectDetail: NextPage = (props) => {
   const projectsMap = new Map(ProjectsData.map((el) => [el.id, el]));
@@ -39,27 +43,31 @@ const ProjectDetail: NextPage = (props) => {
     <>
       <Head>
         <title> {projectData.title} | Julio Bissoli</title>
-        <meta property="og:description" content="Olá, sou Juio Bissoli, e desenvolvi esse projeto"></meta>
-        <meta property="og:title" content={`${projectData.title} | Julio Bissoli`} key="title" />
         <link rel="icon" href="/logo.svg" />
+        <meta property="og:title" content={`${projectData.title} | Julio Bissoli`} key="title" />
+        <meta property="og:description" content="Olá, sou Juio Bissoli, e desenvolvi esse projeto"></meta>
         <meta name="author" content="Julio Bissoli"></meta>
         <meta property="og:image" content={`https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/${projectData.imagePath}`} />
-        <meta property="og:image:width" content="1440" />
-        <meta property="og:image:height" content="1440" />
+
+        <meta property="twitter:image" content={`https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/${projectData.imagePath}`} ></meta>
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:title" content={`${projectData.title} | Julio Bissoli`} ></meta>
+        <meta name="twitter:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
       </Head>
+
       <main className="md:mx-[5vw]  relative border-x-primary flex-1  min-h-[100vh]">
-        {/* <Link
-          href={`/#${projectData.id}`}
-          className="rounded-full  backdrop-blur	bg-white/30 fixed  mx-4 p-2 z-10"
-        >
-          <ArrowLeft className="text-2xl" weight="thin" />
-        </Link> */}
 
-        <header className="mt-16 md:mt-8  border-b-primary flex items-end">
-          <h1 className="p-4 md:p-8  md:mx-16 text-4xl md:text-5xl ">
-            {projectData.title}
+        <header className="mt-4 md:mt-8  border-b-primary ex-col">
+          <div className="px-4 md:px-8  md:mx-16">
+            <BackButton />
+          </div>
+          <div className="flex">
 
-          </h1>
+            <h1 className="p-4 md:px-8  md:mx-16 text-4xl md:text-5xl ">
+              {projectData.title}
+            </h1>
+        
+          </div>
         </header>
 
         <section className="w-full h-[70vh] mt-16 md:px-16 p-4 md:px-16   ">
@@ -92,7 +100,7 @@ const ProjectDetail: NextPage = (props) => {
               </div>
             </aside>
 
-            <aside className="px-2 md:px-8 w-full md:w-2/5 ml-0 md:ml-16 flex flex-col sticky top-0 ">
+            <aside className="px-2 md:px-8 w-full md:w-2/5 ml-0 md:ml-16 flex flex-col md:sticky top-0 ">
 
               <div className="md:sticky top-0 py-4">
 
