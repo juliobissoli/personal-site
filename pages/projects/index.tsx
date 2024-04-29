@@ -21,7 +21,7 @@ const ProjectsPage: NextPage = () => {
                 {
                     projectsData.map(
                         (project, i) => (
-                            <Link href={`/projects/${project.id}`} key={i}>
+                            <Link href={`/projects/${project.id}`} scroll={false} key={i}>
                                 <li className={`h-[70vh] p-4 md:p-16 border-b-primary hover:bg-zinc-50 dark:hover:bg-zinc-900 ${i % 2 == - 0 ? 'border-r-primary' : ''}`}>
                                     <div className="mx-0 md:px-8 space-y-1">
                                         <div className="flex justify-between ">

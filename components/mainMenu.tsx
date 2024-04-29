@@ -1,14 +1,22 @@
 import { List, Moon, Sun, X } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function MainMenu() {
 
   const [isExpanded, toggleExpanded] = useState(false);
 
-  const [isDarkMode, toggleTheme] = useState(false)
+  const [isDarkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (prefersDarkMode && !isDarkMode) {
+      handleChangeTheme()
+    }
+  }, [])
 
   const router = useRouter();
 
@@ -20,7 +28,11 @@ export default function MainMenu() {
     {
       route: "/about",
       label: "Sobre"
-    }
+    },
+    // {
+    //   route: "/about",
+    //   label: "Contato"
+    // }
   ]
 
   const handleChangeTheme = () => {
@@ -31,7 +43,7 @@ export default function MainMenu() {
       document.documentElement.classList.add("dark");
     }
 
-    toggleTheme(!isDarkMode)
+    setDarkMode(!isDarkMode)
   }
 
   return (
@@ -56,7 +68,7 @@ export default function MainMenu() {
             }
           </ul>
 
-          <button onClick={handleChangeTheme} className="text-xl text-zinc-500 h-10 w-10 p-2 hover:bg-zinc-300 rounded-full">
+          <button onClick={handleChangeTheme} className="text-xl text-zinc-950 dark:text-zinc-50 h-10 w-10 p-2 hover:bg-zinc-300 rounded-full">
             {!isDarkMode ? (<Moon size={20} weight="fill" />) : (<Sun size={20} weight="fill" />)}
 
           </button>
@@ -110,7 +122,7 @@ export default function MainMenu() {
                   <footer className="text-center p-16">
                     <button onClick={
                       () => handleChangeTheme()
-                    } className="text-xl text-zinc-500 h-10 w-10 p-2 hover:bg-zinc-300 rounded-full border-primary">
+                    } className="text-xl text-zinc-950 dark:text-zinc-50 h-10 w-10 p-2 hover:bg-zinc-300 rounded-full border-primary">
                       {!isDarkMode ? (<Moon size={20} weight="fill" />) : (<Sun size={20} weight="fill" />)}
 
                     </button>

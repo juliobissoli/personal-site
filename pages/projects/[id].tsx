@@ -6,21 +6,16 @@ import { useEffect, useState } from "react";
 import ProjectsData from "../../data/projects.json";
 import { format, differenceInMonths } from 'date-fns';
 import { ptBR } from 'date-fns/locale'
-
-const textBold = Poppins({ weight: "600", subsets: ["latin"] });
-const textRegular = Manrope({ weight: "400", subsets: ["latin"] });
-const textLight = Manrope({ weight: "200", subsets: ["latin"] });
+import Head from "next/head";
 
 const ProjectDetail: NextPage = (props) => {
   const projectsMap = new Map(ProjectsData.map((el) => [el.id, el]));
 
   const router = useRouter();
 
-  const [imgUrl, setImg] = useState("");
-
   const defaultProjectData: any = {
     id: "",
-    title: "",
+    title: "projetos",
     year: "",
     imagePath: "",
     images: [],
@@ -38,11 +33,17 @@ const ProjectDetail: NextPage = (props) => {
     if (project) {
       setProjectData(project);
     }
-    console.log("veio => ", projectData);
   });
 
   return (
     <>
+      <Head>
+        <title> {projectData.title} | Julio Bissoli</title>
+        <meta property="og:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
+        <meta property="og:title" content="Julio Bissoli" key="title" />
+        <link rel="icon" href="/logo.svg" />
+        <meta property="og:image" content={`https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/${projectData.imagePath}`} />
+      </Head>
       <main className="md:mx-[5vw]  relative border-x-primary flex-1  min-h-[100vh]">
         {/* <Link
           href={`/#${projectData.id}`}
@@ -117,7 +118,7 @@ const ProjectDetail: NextPage = (props) => {
                 </div>
 
                 {
-                (projectData.urlView || projectData.urlRepository) &&
+                  (projectData.urlView || projectData.urlRepository) &&
                   <div className="flex flex-col mb-8">
                     <small className="border-b-primary text-zinc-500 text-sm">
                       Link:

@@ -140,7 +140,7 @@
 
 
 .rotate-content>.rotate-content-item {
-  @apply -rotate-90 bg-blue-500
+  @apply rotate-90 bg-blue-500
 }
 
 
@@ -150,7 +150,7 @@
 
 
 .rotate-content-item {
-  transform: rotate(-90deg); /* Aplica a rotação de 0 graus no hover */
+  transform: rotate(90deg); /* Aplica a rotação de 0 graus no hover */
   transition: transform 0.3s ease; /* Adiciona uma transição suave */
 
 }
