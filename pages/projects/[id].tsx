@@ -39,10 +39,13 @@ const ProjectDetail: NextPage = (props) => {
     <>
       <Head>
         <title> {projectData.title} | Julio Bissoli</title>
-        <meta property="og:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
-        <meta property="og:title" content="Julio Bissoli" key="title" />
+        <meta property="og:description" content="Olá, sou Juio Bissoli, e desenvolvi esse projeto"></meta>
+        <meta property="og:title" content={`${projectData.title} | Julio Bissoli`} key="title" />
         <link rel="icon" href="/logo.svg" />
+        <meta name="author" content="Julio Bissoli"></meta>
         <meta property="og:image" content={`https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/${projectData.imagePath}`} />
+        <meta property="og:image:width" content="1440" />
+        <meta property="og:image:height" content="1440" />
       </Head>
       <main className="md:mx-[5vw]  relative border-x-primary flex-1  min-h-[100vh]">
         {/* <Link

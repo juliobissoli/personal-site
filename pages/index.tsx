@@ -34,11 +34,14 @@ export default function Home() {
   return (
     <div className="overflow-y-hidden ">
       <Head>
-        <title>Julio Bissolisss</title>
+        <title> Julio Bissoli</title>
         <meta property="og:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
         <meta property="og:title" content="Julio Bissoli" key="title" />
         <link rel="icon" href="/logo.svg" />
-        <meta property="og:image" content="/da-backoffice/banner-backoffice.png" />
+        <meta name="author" content="Julio Bissoli"></meta>
+        <meta property="og:image" content={`https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/img-share.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <div
         className={` scroll-inherit-display bloc md:flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto`}

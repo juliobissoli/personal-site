@@ -22,12 +22,12 @@ const ProjectsPage: NextPage = () => {
                     projectsData.map(
                         (project, i) => (
                             <Link href={`/projects/${project.id}`} scroll={false} key={i}>
-                                <li className={`h-[70vh] p-4 md:p-16 border-b-primary hover:bg-zinc-50 dark:hover:bg-zinc-900 ${i % 2 == - 0 ? 'border-r-primary' : ''}`}>
+                                <li className={`min-h-[70vh] p-4 md:p-16 border-b-primary hover:bg-zinc-50 dark:hover:bg-zinc-900 ${i % 2 == - 0 ? 'border-r-primary' : ''}`}>
                                     <div className="mx-0 md:px-8 space-y-1">
                                         <div className="flex justify-between ">
                                             <h2 className="text-3xl text-zinc-500">{project.title}</h2>
                                             <button className=" btn-secondary flex text-sm gap-2">
-                                                <span className=" hidden md:block">Ver detalhes</span>
+                                                <span className=" hidden xl:block">Ver detalhes</span>
                                                 <ArrowUpRight size={18} />
                                             </button>
                                         </div>

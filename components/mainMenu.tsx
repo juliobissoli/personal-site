@@ -56,11 +56,11 @@ export default function MainMenu() {
 
           <ul className="flex flex-col items-center gap-8 text-zinc-700 dark:text-zinc-300  ">
             {
-              routersAvailable.map((route, i) => (
-                <li key={i} className={`m-4 rotate-content-item border-b-primary border-1   hover:border-zinc-500 ${route.route === router.pathname ? 'border-border-zinc-100' : 'border-transparent'}`}>
-                  <Link href={route.route}>
+              routersAvailable.map((r, i) => (
+                <li key={i} className={`m-4 rotate-content-item border-1 hover:border-zinc-500 ${r.route === router.pathname ? 'border-b-primary' : 'border-trasparent '}`}>
+                  <Link href={r.route}>
                     <button className={` whitespace-nowrap text-sm  uppercase tracking-wider `}>
-                      {route.label}
+                      {r.label} 
                     </button>
                   </Link>
                 </li>
