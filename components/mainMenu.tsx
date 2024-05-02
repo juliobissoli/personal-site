@@ -29,6 +29,10 @@ export default function MainMenu() {
       route: "/about",
       label: "Sobre"
     },
+    {
+      route: "/contact",
+      label: "Contato"
+    },
     // {
     //   route: "/about",
     //   label: "Contato"
@@ -59,7 +63,7 @@ export default function MainMenu() {
               routersAvailable.map((r, i) => (
                 <li key={i} className={`m-4 rotate-content-item border-1 hover:border-zinc-500 ${r.route === router.pathname ? 'border-b-primary' : 'border-trasparent '}`}>
                   <Link href={r.route}>
-                    <button className={` whitespace-nowrap text-sm  uppercase tracking-wider `}>
+                    <button className="whitespace-nowrap text-xs  uppercase tracking-wider hover:font-semibold">
                       {r.label} 
                     </button>
                   </Link>
