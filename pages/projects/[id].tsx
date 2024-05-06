@@ -11,6 +11,7 @@ import Link from "next/link";
 import { ArrowLeft } from "@phosphor-icons/react";
 import BackButton from "@/components/backButton";
 import { space } from "postcss/lib/list";
+import Markdown from "markdown-to-jsx";
 
 const ProjectDetail: NextPage = (props) => {
   const projectsMap = new Map(ProjectsData.map((el) => [el.id, el]));
@@ -84,8 +85,11 @@ const ProjectDetail: NextPage = (props) => {
               <div className="uppercase text-zinc-500 text-sm border-b-primary">
                 Mais detalhes
               </div>
-              <div className="text-justify">
-                <span className="text-xl md:text-3xl text-secondary tracking-wide font-light">{projectData.description}</span>
+              <div className="text-justify space-y-4 text-xl md:text-3xl text-secondary tracking-wide font-light">
+                 <Markdown>
+                   {projectData.description}
+                 </Markdown>
+           
               </div>
 
               <div className="py-16 space-y-8">

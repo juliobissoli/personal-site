@@ -3,8 +3,8 @@
     "id": "da-backoffice",
     "highlights": true,
     "title": "DA-Backoffice",
-    "subtitle": "Sistema web interno da Motora para gerenciar o DriverAnalytics. Oferece painéis de gestão para dispositivos, finanças e usuários, com métricas e histórico de operações. Ideal para otimizar processos e decisões estratégicas.",
-    "init":"2023-06-06",
+    "subtitle": "Sistema interno da Motora para gerenciar o DriverAnalytics.",
+    "init": "2023-06-06",
     "end": "2024-04-01",
     "urlView": "https://backoffice.dev.driveranalytics.com.br/",
     "urlRepository": "",
@@ -43,7 +43,7 @@
     "id": "codtime",
     "highlights": true,
     "title": "CodTime",
-    "subtitle": "O CodTime nasceu da necessidade pessoal. Precisava de um sistema simples de registro de horas trabalhadas.",
+    "subtitle": "Sistema de gestão de horas voltadas para desenvolvedores.",
     "init": "2020-06-16",
     "end": "2023-03-17",
     "urlView": "https://codtime-web.vercel.app/",
@@ -76,7 +76,7 @@
     "id": "erp-linhagua",
     "highlights": true,
     "title": "ERP-Linhagua",
-    "subtitle": "O Ponta de Lança marcou meu primeiro projeto para terceiros. Desenvolvi um ERP para otimizar o processo de produção de uma empresa de envase de água mineral, cobrindo desde agendamentos até pagamentos, abrangendo todos os aspectos operacionais da empresa.",
+    "subtitle": "ERP de gestão da prdução de uma envasodora de água mineral",
     "init": "2022-01-01",
     "end": "2022-03-01",
     "urlView": "",
@@ -110,7 +110,7 @@
     "id": "driveranalytics",
     "highlights": true,
     "title": "Driver Analytics",
-    "subtitle": "Este sistema web abrange todo o ciclo de gestão da condução dos motoristas dos clientes do Motota. Com acesso às informações dos dispositivos IoT instalados nos veículos, monitora os motoristas por meio de Inteligência Artificial, proporcionando uma gestão eficiente e insights valiosos para a empresa.",
+    "subtitle": "Plataforma de monitoramente de frota e condução de motoristas.",
     "init": "2021-09-01",
     "end": "2024-03-01",
     "urlView": "https://driveranalytics.com.br/",
@@ -141,10 +141,45 @@
     ]
   },
   {
+    "id": "prompt-room",
+    "highlights": false,
+    "title": "Prompt Room",
+    "subtitle": "Plataforma de gestão de prompts poara IA.",
+    "init": "2023-09-01",
+    "end": "2023-11-01",
+    "urlView": "",
+    "urlRepository": "",
+    "year": "2022",
+    "imagePath": "prompt-room/banner.png",
+    "images": [
+      "prompt-room/img-1.png",
+      "prompt-room/img-2.png",
+      "prompt-room/img-3.png",
+      "prompt-room/img-4.png",
+      "prompt-room/img-5.png",
+      "prompt-room/img-6.png",
+      "prompt-room/img-7.png",
+      "prompt-room/img-7.png",
+      "prompt-room/img-9.png"
+    ],
+    "description": "Este foi um projeto freelancer que desenvolvi para um cliente, com a ideia principal de gerenciar os prompts utilizados em assistentes de inteligência artificial.\n\n A plataforma consiste em duas interfaces: uma na qual os usuários podem cadastrar seus próprios prompts e outra na qual podem utilizar os prompts cadastrados por terceiros",
+    "activities": [
+      "Desenvolvimento do front-end",
+      "Desenvolvimento back-end"
+    ],
+    "tools": [
+      "React",
+      "Tailwind",
+      "Node",
+      "OpenAI API",
+      "Stripe"
+    ]
+  },
+  {
     "id": "sca-amaes",
     "highlights": false,
     "title": "SCA Amaes",
-    "subtitle": "Durante minha colaboração com o laboratório LabES na UFES, participei do desenvolvimento do SCA AMAES. Esse sistema valioso visa aprimorar a gestão da AMAES, uma associação sem fins lucrativos que apoia pessoas autistas no Espírito Santo. O SCA AMAES permite uma administração eficiente, direcionando recursos para o apoio direto às pessoas autistas e suas famílias.",
+    "subtitle": "ERP de gestão de pessoas assistidas pela AMAES.",
     "init": "2022-02-01",
     "end": "2022-09-01",
     "urlView": "",
@@ -173,6 +208,37 @@
     ]
   },
   {
+    "id": "couter-stock",
+    "highlights": false,
+    "title": "Counter Stock",
+    "subtitle": "App de gerenciamento de estoque de insumos de produção",
+    "init": "2023-09-01",
+    "end": "2023-11-01",
+    "urlView": "",
+    "urlRepository": "",
+    "year": "2022",
+    "imagePath": "cs/banner.png",
+    "images": [
+      "cs/img-1.jpg",
+      "cs/img-2.jpg",
+      "cs/img-3.jpg"
+    ],
+    "description" : "Durante a produção do hardware do DriverAnalytics, enfrentamos dificuldades na gestão dos componentes necessários para sua construção.\n\nCom o objetivo de solucionar esse problema, desenvolvi um sistema simples para auxiliar na gestão do estoque. Este sistema envolve um cadastro direto e a atualização da quantidade de cada componente. Cada item é identificado por um QR code, que permite à pessoa responsável pelo estoque escaneá-lo através do aplicativo e localizar facilmente o produto no sistema.",
+    "activities": [
+      "UI/UX",
+      "Levantamento de requisitos",
+      "Modelagm",
+      "Desenvolvimento do app",
+      "Desenvolvimento back-end"
+    ],
+    "tools": [
+      "Figma",
+      "Flutter",
+      "Nest",
+      "MongoDB"
+    ]
+  },
+  {
     "id": "healthlife",
     "highlights": false,
     "title": "HealthLife",
@@ -193,7 +259,7 @@
       "healflife/imag-7.png",
       "healflife/imag-8.png"
     ],
-    "description": "App para melhor o estilo de vida. Esse sistema foi proposto para auxiliar os usuários monitorarem diversos aspectos da saúde delas como: alimentação, atividade física, sono, inestão de água etc.",    
+    "description": "App para melhor o estilo de vida. Esse sistema foi proposto para auxiliar os usuários monitorarem diversos aspectos da saúde delas como: alimentação, atividade física, sono, inestão de água etc.",
     "activities": [
       "UI/UX",
       "Levantamento de requisitos",
@@ -201,6 +267,35 @@
     ],
     "tools": [
       "Figma"
+    ]
+  },
+  {
+    "id": "renter",
+    "highlights": false,
+    "title": "Renter",
+    "subtitle": "App de gestão de aluguel de imoveis.",
+    "init": "2023-09-01",
+    "end": "2023-11-01",
+    "urlView": "",
+    "urlRepository": "https://github.com/juliobissoli/RenterApp",
+    "year": "2022",
+    "imagePath": "renter/banner.png",
+    "images": [
+      "renter/img-1.png",
+      "renter/img-2.png",
+      "renter/img-3.png",
+      "renter/img-4.png",
+      "renter/img-5.png"
+    ],
+    "description": "Este aplicativo surgiu como resultado de um projeto proposto durante uma disciplina do Curso de Ciência da Computação. Como trabalho final, o professor solicitou que desenvolvêssemos uma aplicação completa utilizando os conhecimentos adquiridos ao longo das aulas. \n\n Como é de costume, tive a ideia para este projeto a partir de uma dificuldade enfrentada por minha família na gestão de imóveis. Assim, com essa premissa, desenvolvi o Rentter. \n\n O conceito por trás do Rentter é a simplicidade: o usuário cadastra os imóveis e, a partir daí, pode gerenciar uma série de informações, como despesas, receitas, aluguéis, calendário, entre outros.",
+    "activities": [
+      "UI/UX",
+      "Levantamento de requisitos",
+      "Modelagm"
+    ],
+    "tools": [
+      "Figma",
+      "DEsenolvimento do app"
     ]
   }
 ]
