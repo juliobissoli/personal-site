@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <div className="overflow-y-hidden ">
-      {/* <Head>
+      <Head>
         <title> Julio Bissoli</title>
         <meta property="og:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
         <meta property="og:title" content="Julio Bissoli" key="title" />
@@ -48,9 +48,9 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:title" content="Julio Bissoli"></meta>
         <meta name="twitter:description" content="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"></meta>
-      </Head> */}
+      </Head>
 
-      <SeoDefault />
+      {/* <SeoDefault /> */}
     
       <div
         className="scroll-inherit-display bloc md:flex flex-wrap-nowrap whitespace-nowrap overflow-x-auto  overflow-y-hidden w-auto"
