@@ -2,6 +2,7 @@
   {
     "id": "da-backoffice",
     "highlights": true,
+    "priority": 0,
     "title": "DA-Backoffice",
     "subtitle": "Sistema interno da Motora para gerenciar o DriverAnalytics.",
     "init": "2023-06-06",
@@ -42,6 +43,7 @@
   {
     "id": "codtime",
     "highlights": true,
+    "priority": 0,
     "title": "CodTime",
     "subtitle": "Sistema de gestão de horas voltadas para desenvolvedores.",
     "init": "2020-06-16",
@@ -75,6 +77,7 @@
   {
     "id": "erp-linhagua",
     "highlights": true,
+    "priority": 0,
     "title": "ERP-Linhagua",
     "subtitle": "ERP de gestão da prdução de uma envasodora de água mineral",
     "init": "2022-01-01",
@@ -109,6 +112,7 @@
   {
     "id": "driveranalytics",
     "highlights": true,
+    "priority": 0,
     "title": "Driver Analytics",
     "subtitle": "Plataforma de monitoramente de frota e condução de motoristas.",
     "init": "2021-09-01",
@@ -143,6 +147,7 @@
   {
     "id": "prompt-room",
     "highlights": false,
+    "priority": 10,
     "title": "Prompt Room",
     "subtitle": "Plataforma de gestão de prompts poara IA.",
     "init": "2023-09-01",
@@ -176,8 +181,40 @@
     ]
   },
   {
+    "id": "renter",
+    "highlights": false,
+    "priority": 20,
+    "title": "Renter",
+    "subtitle": "App de gestão de aluguel de imoveis.",
+    "init": "2023-09-01",
+    "end": "2023-11-01",
+    "urlView": "",
+    "urlRepository": "https://github.com/juliobissoli/RenterApp",
+    "year": "2022",
+    "imagePath": "renter/banner.png",
+    "images": [
+      "renter/img-1.png",
+      "renter/img-2.png",
+      "renter/img-3.png",
+      "renter/img-4.png",
+      "renter/img-5.png"
+    ],
+    "description": "Este aplicativo surgiu como resultado de um projeto proposto durante uma disciplina do Curso de Ciência da Computação. Como trabalho final, o professor solicitou que desenvolvêssemos uma aplicação completa utilizando os conhecimentos adquiridos ao longo das aulas. \n\n Como é de costume, tive a ideia para este projeto a partir de uma dificuldade enfrentada por minha família na gestão de imóveis. Assim, com essa premissa, desenvolvi o Rentter. \n\n O conceito por trás do Rentter é a simplicidade: o usuário cadastra os imóveis e, a partir daí, pode gerenciar uma série de informações, como despesas, receitas, aluguéis, calendário, entre outros.",
+    "activities": [
+      "UI/UX",
+      "Levantamento de requisitos",
+      "Modelagm"
+    ],
+    "tools": [
+      "Figma",
+      "Flutter",
+      "SQLight"
+    ]
+  },
+  {
     "id": "sca-amaes",
     "highlights": false,
+    "priority": 50,
     "title": "SCA Amaes",
     "subtitle": "ERP de gestão de pessoas assistidas pela AMAES.",
     "init": "2022-02-01",
@@ -210,6 +247,7 @@
   {
     "id": "couter-stock",
     "highlights": false,
+    "priority": 20,
     "title": "Counter Stock",
     "subtitle": "App de gerenciamento de estoque de insumos de produção",
     "init": "2023-09-01",
@@ -241,6 +279,7 @@
   {
     "id": "healthlife",
     "highlights": false,
+    "priority": 30,
     "title": "HealthLife",
     "subtitle": "App para melhor o estilo de vida. Esse sistema foi proposto para auxiliar os usuários monitorarem diversos aspectos da saúde delas como: alimentação, atividade física, sono, inestão de água etc.",
     "init": "2023-09-01",
@@ -268,35 +307,6 @@
     "tools": [
       "Figma"
     ]
-  },
-  {
-    "id": "renter",
-    "highlights": false,
-    "title": "Renter",
-    "subtitle": "App de gestão de aluguel de imoveis.",
-    "init": "2023-09-01",
-    "end": "2023-11-01",
-    "urlView": "",
-    "urlRepository": "https://github.com/juliobissoli/RenterApp",
-    "year": "2022",
-    "imagePath": "renter/banner.png",
-    "images": [
-      "renter/img-1.png",
-      "renter/img-2.png",
-      "renter/img-3.png",
-      "renter/img-4.png",
-      "renter/img-5.png"
-    ],
-    "description": "Este aplicativo surgiu como resultado de um projeto proposto durante uma disciplina do Curso de Ciência da Computação. Como trabalho final, o professor solicitou que desenvolvêssemos uma aplicação completa utilizando os conhecimentos adquiridos ao longo das aulas. \n\n Como é de costume, tive a ideia para este projeto a partir de uma dificuldade enfrentada por minha família na gestão de imóveis. Assim, com essa premissa, desenvolvi o Rentter. \n\n O conceito por trás do Rentter é a simplicidade: o usuário cadastra os imóveis e, a partir daí, pode gerenciar uma série de informações, como despesas, receitas, aluguéis, calendário, entre outros.",
-    "activities": [
-      "UI/UX",
-      "Levantamento de requisitos",
-      "Modelagm"
-    ],
-    "tools": [
-      "Figma",
-      "Flutter",
-      "SQLight"
-    ]
   }
+
 ]

@@ -65,7 +65,7 @@ export default async function (
             from: 'onboarding@resend.dev',
             to: 'juliobissoli33@gmail.com',
             subject: `Contato via portifólio |  ${req.body.name}`,
-            html: `<p>${req.body.message} </p> <p> email de contato: ${req.body.email}</p>`
+            html: `<p>${req.body.message} </p> <p> email de contato: ${req.body.email}</p> <p> telefone de contato: ${req.body.phone}</p>`
         });
 
 

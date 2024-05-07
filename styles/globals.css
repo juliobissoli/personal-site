@@ -7,7 +7,7 @@
 
 
 .btn-primary {
-  @apply border rounded-full px-4 py-2 font-light text-zinc-200 dark:text-zinc-700 bg-zinc-900 dark:bg-zinc-50 disabled:opacity-20 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-100 tracking-wide uppercase 
+  @apply border rounded-full px-4 py-2 font-light text-zinc-200 dark:text-zinc-700 bg-zinc-900 dark:bg-zinc-50 disabled:opacity-20 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-100 tracking-wide uppercase
 }
 
 
@@ -19,13 +19,33 @@
   @apply text-zinc-700 dark:text-zinc-300
 }
 
-.border-primary {    @apply border dark:border-zinc-800} 
-.border-y-primary {  @apply border-y dark:border-zinc-800} 
-.border-x-primary {  @apply border dark:border-zinc-800} 
-.border-t-primary {  @apply border-t dark:border-zinc-800} 
-.border-b-primary {  @apply border-b dark:border-zinc-800} 
-.border-r-primary {  @apply border-r dark:border-zinc-800} 
-.border-l-primary {  @apply border-l dark:border-zinc-800} 
+.border-primary {
+  @apply border dark:border-zinc-800
+}
+
+.border-y-primary {
+  @apply border-y dark:border-zinc-800
+}
+
+.border-x-primary {
+  @apply border dark:border-zinc-800
+}
+
+.border-t-primary {
+  @apply border-t dark:border-zinc-800
+}
+
+.border-b-primary {
+  @apply border-b dark:border-zinc-800
+}
+
+.border-r-primary {
+  @apply border-r dark:border-zinc-800
+}
+
+.border-l-primary {
+  @apply border-l dark:border-zinc-800
+}
 
 
 .input-primary {
@@ -149,18 +169,99 @@
 
 
 .rotate-content {
-  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição suave */
 }
 
 
 .rotate-content-item {
-  transform: rotate(90deg); /* Aplica a rotação de 0 graus no hover */
-  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+  transform: rotate(90deg);
+  /* Aplica a rotação de 0 graus no hover */
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição suave */
 
 }
 
 .rotate-content:hover .rotate-content-item {
-  transform: rotate(0deg); /* Aplica a rotação de 0 graus no hover */
-  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+  transform: rotate(0deg);
+  /* Aplica a rotação de 0 graus no hover */
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição suave */
 
+}
+
+
+.show-hover {}
+
+
+.show-hover-item {
+  visibility: hidden;
+
+}
+
+.show-hover:hover .show-hover-item {
+  visibility: visible;
+}
+
+
+.grid-logo {
+  height: 70px;
+  width: 70px;
+  position: relative;
+  @apply bg-zinc-50
+}
+
+.squada {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  @apply bg-zinc-900
+
+}
+.squada-horizontal {
+  right: 0;
+  margin-top: 20px
+}
+
+.squada-vertical {
+  bottom: 0;
+  margin-left: 20px;
+}
+
+.left-animate {
+  animation: ease 0.5s goToLeft;
+  margin-right: -20px;
+  @apply bg-zinc-50
+
+ 
+}
+
+.bottom-animate {
+  animation: ease 1s down;
+  margin-bottom: -20px;
+  @apply bg-zinc-50
+
+
+
+}
+
+@keyframes down {
+  0% {
+    margin-bottom: 0; 
+  }
+  50% {
+    margin-bottom: 0; 
+  }
+  100%  {
+    margin-bottom: -20px;
+  }
+}
+
+@keyframes goToLeft {
+  0% {
+    margin-right: 0; 
+  }
+  100%  {
+    margin-right: -20px;
+  }
 }

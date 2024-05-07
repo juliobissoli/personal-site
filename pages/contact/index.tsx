@@ -15,6 +15,7 @@ const ContactsPage: NextPage = () => {
     const initFormData = {
         email: '',
         name: '',
+        phone: '',
         message: '',
         isValid: false
     };
@@ -23,9 +24,21 @@ const ContactsPage: NextPage = () => {
     const [formData, setFormData] = useState(initFormData)
     const [requestStatus, setRequestStatus] = useState(AppState.EMPTY)
 
-    const handleSetForm = (data: string, entity: 'email' | 'name' | 'message') => {
+    const handleSetForm = (data: string, entity: 'email' | 'name' | 'message' | 'phone') => {
         let copy = { ...formData }
 
+
+        if (entity === 'phone') {
+            data = data.replace(/[^\d()-]/g, '');
+            const x = data.match(/(\d{2})(\d{5})(\d*)/);
+
+
+
+            if (x) {
+                const res = `(${x[1]}) ${x[2]}-${x[3]}`
+                data = res;
+            }
+        }
         copy[entity] = data
 
         const regexEmail = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -78,6 +91,25 @@ const ContactsPage: NextPage = () => {
 
             <section className="flex mt-8  p-4 md:p-8 md:mx-16  gap-16 flex-col md:flex-row">
                 <aside className="w-full md:w-[620px]">
+                    <p className="text-xl text-justify	mb-8 text-zinc-500">
+                        Vamos trabalhar juntos! Entre em contato e vamos conversar sobre como podemos realizar o seu projeto.
+                    </p>
+                    {
+                        (requestStatus === AppState.ERROR || requestStatus === AppState.SUCCESS) &&
+                        <div className={`my-8 p-4 rounded-xl border-primary flex justify-between ${requestStatus === AppState.SUCCESS ? 'bg-green-100/10' : 'bg-red-100/10'}`}>
+                            <p className="text-center">
+                                {
+                                    requestStatus === AppState.SUCCESS
+                                        ? 'Promto o email foi enviado🎉🎉! Muito em breve irei te responder'
+                                        : 'Ops! alguma coisa deu errado. Tente mandar o email diretamente pelo link abaixo'
+                                }
+
+                            </p>
+                            <div className=" text-right">
+                                <button className="" onClick={() => setRequestStatus(AppState.EMPTY)} ><X /></button>
+                            </div>
+                        </div>
+                    }
                     <form className="space-y-4">
                         <div>
                             <p className="font-light text-sm text-zinc-500">Seu nome</p>
@@ -103,6 +135,19 @@ const ContactsPage: NextPage = () => {
                         </div>
 
                         <div className="">
+                            <p className="font-light text-sm text-zinc-500">Seu número de telefone</p>
+                            <input
+                                value={formData.phone}
+                                onChange={
+                                    (data) => {
+                                        handleSetForm(data.target.value, 'phone')
+                                    }
+                                }
+                                type="text"
+                                className="input-primary w-full" />
+                        </div>
+
+                        <div className="">
                             <p className="font-light text-sm text-zinc-500">Fale um pouco do que tem em mente</p>
                             <textarea
                                 value={formData.message}
@@ -124,24 +169,9 @@ const ContactsPage: NextPage = () => {
                         </div>
                     </form>
 
-                    {
-                        (requestStatus === AppState.ERROR || requestStatus === AppState.SUCCESS) &&
-                        <div className={`my-8 p-4 rounded-xl border-primary`}>
-                            <div className="w-full text-right">
-                                <button className="" onClick={() => setRequestStatus(AppState.EMPTY)} ><X /></button>
-                            </div>
-                            <p className="text-center">
-                                {
-                                    requestStatus === AppState.SUCCESS
-                                        ? 'Promto o email foi enviado🎉🎉! Muito em breve irei te responder'
-                                        : 'Ops! alguma coisa deu errado. Tente mandar o email diretamente pelo link abaixo'
-                                }
 
-                            </p>
-                        </div>
-                    }
 
-                    <div className="w-full space-y-4 mt-16 md:mt-24 ">
+                    <div className="w-full space-y-4 mt-16  ">
                         <h3 className="uppercase border-b-primary py-1 text-xs  mb-2">minhas redes</h3>
 
                         <div className="flex w-full flex-wrap gap-4">

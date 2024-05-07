@@ -11,32 +11,23 @@ const SeoDefault = ({}) => {
     return (
         <>
             <NextSeo
-                title="Using More of Config"
-                description="This example uses more of the available config options."
+                title="Julio Bissoli"
+                description="Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design"
                 canonical="https://www.canonical.ie/"
                 openGraph={{
-                    url: 'https://www.url.ie/a',
-                    title: 'Open Graph Title',
-                    description: 'Open Graph Description',
+                    url: 'https://julioboissoli.vercel.app',
+                    title: 'Julio Bissoli',
+                    description: 'Olá, sou Juio Bissoli, desenvolvedor de software e UI/UX design',
                     images: [
                         {
-                            url: 'https://www.example.ie/og-image-01.jpg',
-                            width: 800,
-                            height: 600,
-                            alt: 'Og Image Alt',
-                            type: 'image/jpeg',
+                            url: 'https://raw.githubusercontent.com/juliobissoli/personal-site/main/public/img-share.png',
+                            width: 1200,
+                            height: 630,
+                            alt: 'Julio Bissoli',
+                            type: 'image/png',
                         },
-                        {
-                            url: 'https://www.example.ie/og-image-02.jpg',
-                            width: 900,
-                            height: 800,
-                            alt: 'Og Image Alt Second',
-                            type: 'image/jpeg',
-                        },
-                        { url: 'https://www.example.ie/og-image-03.jpg' },
-                        { url: 'https://www.example.ie/og-image-04.jpg' },
                     ],
-                    siteName: 'SiteName',
+                    siteName: 'JulioBissoli',
                 }}
                 twitter={{
                     handle: '@handle',
