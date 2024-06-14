@@ -9,6 +9,8 @@ const ProjectsPage: NextPage = () => {
 
     const projectsData = ProjectsData.sort((a, b) => a.priority - b.priority);
 
+    const tools = Array.from(new Set(projectsData.map(project => project.tools).flat()));
+
     return (
         <main className="md:mx-[5vw]  relative border-primary border-0 md:border-1flex-1  min-h-[100vh]">
             <header className="mt-4 md:mt-8  border-b-primary flex items-end">
@@ -16,6 +18,16 @@ const ProjectsPage: NextPage = () => {
                     Projetos
                 </h1>
             </header>
+
+            {/* <div className="border-b-primary px-4 md:px-8 lg:px-12 xl:px-24 py-4 w-full">
+                <ul className="inline-flex justify-end flex-wrap gap-2 overflow-x-auto  scroll-inherit-display">
+                    {
+                        tools.map((tool, i) => (
+                            <li key={i} className="badge">{tool}</li>
+                        ))
+                    }
+                </ul>
+            </div> */}
 
             <ul className="grid grid-cols-1 md:grid-cols-2">
                 {

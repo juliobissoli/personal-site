@@ -265,3 +265,11 @@
     margin-right: -20px;
   }
 }
+
+.text-box {
+  max-width: 28rem; /* max-w-md */
+  /* height: 300px; */
+  word-break: break-word; /* break-words */
+  white-space: normal; /* Ensure normal white-space behavior */
+  overflow-wrap: break-word; /* Ensure text wraps */
+}

@@ -2,8 +2,7 @@ import { ArrowArcRight, ArrowDown, ArrowRight } from "@phosphor-icons/react";
 import { Sora, Manrope } from "next/font/google";
 import { CompaniesLogos } from "./companiesLogos";
 
-const textStrong = Sora({ weight: "700", subsets: ["latin"] });
-const textThin = Manrope({ weight: "400", subsets: ["latin"] });
+const textThin = Manrope({ subsets: ["latin"] });
 
 interface Props {
   clickShowMore: () => void;
@@ -12,56 +11,39 @@ interface Props {
 export const WelcomeHome: React.FC<Props> = ({ clickShowMore }) => {
   return (
     <div className="w-[100vw] md:w-[105vw] h-[100vh] lg:pl-[5vw]   pl-0 md:pl-[6vw]">
-      <div className="flex justify-between h-full border-0  md: border-1 border-l-primary">
+      <div className="relative flex justify-between h-full border-0  md: border-1 border-l-primary">
+
+
 
         <aside className=" h-full w-full ">
           {/* <header className="pt-8 md:pt-16 "> */}
-          <div className="w-full h max-w-[1624px] h-full mx-auto p-4 flex-1 relative">
+          <div className="w-full   max-w-[1624px] mx-auto  flex-1 ">
 
-            <div className="max-w-[1140px] mt-[15vh] md:mt-[25vh]">
-              <h1 className={`fade-in text-4xl gap-2 text-secondary w-full flex flex-wrap tracking-tight  sm:text-7xl `}>
-                <span className={`${textStrong.className}`}>Olá,</span> <span className={textStrong.className}>sou o</span> <span className={textStrong.className}>Julio,</span><span className={textStrong.className}>desenvolvedor</span>
-                <span className={textStrong.className}>de software e</span>
-                <span className={`bg-gradient-to-br bg-clip-text from-orange-500 to-violet-600 text-transparent h-6xl ${textStrong.className}`}>
-                  UI/UX design.
-                </span>
+            <div className="overflow-hidden flex flex-col justify-between w-full p-8  h-[70vh] lg:h-[80vh] mt-10 rounded-2xl relative">
+              {/* <div className="absolute w-[100vh] h-[100vh] ">
+                <img src="/noise.png" className="w-full h-full opacity-10   " />
+              </div> */}
 
-              </h1>
-              <ul className="flex gap-3 mt-3 text-secondary text-secondary mx-1">
-                <li>
-                  <button className=" whitespace-nowrap text-xs md:text-sm tracking-wider uppercase">
-                    <a
-                      href="https://www.linkedin.com/in/julio-bissoli-752a231a3/"
-                      target="_blank"
-                    >
-                      LinkedIn
-                    </a>
-                  </button>
-                </li>
-                <li>•</li>
-                <li>
-                  <button className=" whitespace-nowrap text-xs md:text-sm tracking-wider uppercase">
-                    <a href="https://github.com/juliobissoli" target="_blank">
-                      Github
-                    </a>
-                  </button>
-                </li>
-                <li>•</li>
-                <li>
-                  <button className=" whitespace-nowrap text-xs md:text-sm tracking-wider uppercase">
-                    <a href="mailto:juliobissoli33@gmail.com" target="_blank">
-                      Email
-                    </a>
-                  </button>
-                </li>
-              </ul>
+              <header>
+                <h1 className={`${textThin.className} fade-in text-4xl gap-2 text-secondary w-full flex flex-wrap tracking-tight  `}>
+                  Julio Bissoli
+                </h1>
+                <h2 className="uppercase text-zinc-500">Desenvolvedor e Design</h2>
+              </header>
+
+              <div className='w-full flex justify-end'>
+                <div className="w-[240px] font-semibold tracking-wide  text-justify uppercase text-box text-sm">
+                  <div className={` ${textThin.className}  h-[4px] w-1/3 bg-black dark:bg-white mb-4`}></div>
+                  Desenvolvedor de software apaixonado por criar 
+                  sistemas com interfaces simples e intuitivas que
+                  proporcionam uma excelente experiência ao usuário.
+                </div>
+              </div>
             </div>
-            <footer
-              className="absolute bottom-[15vh] md:bottom-0 right-0 m-8 md:m-16 my-16 "
-            >
+            <footer className="w-full flex justify-end mt-8 lg:mt-16 px-8 ">
               <button
                 onClick={clickShowMore}
-                className={`flex items-center gap-3 btn-primary`}>
+                className={`flex items-center gap-3 btn-secondary`}>
                 <span className={textThin.className}> Principais trabalhos </span>
                 <div className="rotate-0 md:-rotate-90">
                   <ArrowDown className=" text-md animate-bounce" />
